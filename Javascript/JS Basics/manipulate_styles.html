@@ -1,0 +1,29 @@
+<html>
+	
+	<head>
+		<title>Manipulate Styles</title>	
+	</head>
+	
+	<body>
+	
+	<p id="moreText">Hello World!</p>
+	<button id="styleText">Click me!</button>
+	
+	<script type="text/javascript">
+		//this will add a style to the "Hello World!" text 
+		document.getElementById("styleText").onclick = function() {
+		//change the style color to red:
+			document.getElementById("moreText").style.color = "red";
+			
+		//change font size (it's not font-size instead it's fontSize because this is javascript a programming language)
+			document.getElementById("moreText").style.fontSize = "50px";
+		
+		/*this disappears the text! but we're not using it, lol.*/
+		//document.getElementById("moreText").style.display = "none";
+		
+		}
+	</script>
+	
+	</body>
+
+</html>

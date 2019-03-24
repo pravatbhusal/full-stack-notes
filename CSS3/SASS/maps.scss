@@ -1,0 +1,32 @@
+/* Maps allow for a complex array of data to be mapped together */
+/* Maps have a key and value pair */
+
+$map1: (
+	'key1': 'value1',
+	'key2': 200px
+);
+
+$nestedMap: (
+	'key1': 'value1',
+	'key2': 'value2',
+	'NestedMap' : (
+		'NestedKey': 'Nested Value',
+		'key3': 'value3'ss
+	)
+);
+
+.foo {
+	/*returns the keys of the map*/
+	content: map-keys($map1);
+	/*returns the values of the map*/
+	content: map-keys($map1);
+	/*returns true or false if the map has a specific key*/
+	content: map-has-key($map1, 'key1');
+	/*returns the value of a key from a map*/
+	content: map-get($map1, 'key1');
+	/*merges two maps, the inspect is used to return a String containing as the SaSS representation in order to not error*/
+	content: inspect(map-merge($map1, $nestedMap));
+	/*removes a key or multiple keys from a map*/
+	content: inspect(map-remove($map, 'key1', 'key2'));
+	
+}

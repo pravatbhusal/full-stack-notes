@@ -1,0 +1,71 @@
+//*Inheritance makes property and selector inheritance a lot easier*/
+$el: button;
+$list: elementOne, elementTwo, elementThree;
+
+/* Inherited Selectors */
+#parent {
+	background: green;
+	
+	/*we have a child inside the "parent" selector with id "child-One"*/
+	#child-One {
+		background: yellow;
+		font-size: 1em;
+	}
+	
+	#child-Two {
+		font-weight: 200;
+		//inner child's "content" class will be edited
+		#inner-child .content {
+			background: blue;
+		}
+	}
+	
+	/*edits all 3 childs of the "parent"*/
+	#child-Three, .child-Four, .child-Five {
+		background: black;
+	}
+	
+	/*the & symbol is to remove any spaces between classes/ids when compiling into CSS
+	uses the parent's class of "HasClass" class and uses the "button" in the class*/
+	&.HasClass ##($el){
+		background: blue;
+		font-weight: bold;
+		font-style: italic;
+	}
+}
+
+#box {
+	width: 500px;
+	height: 250px;
+	
+	/*SaSS allows us to make media queries inside of another element to make syntax nicer*/
+	@media (min-width: 768px) {
+		width: 250px;
+		height: 100px;
+	}
+}
+
+/*Inherited Properties */
+/*Make placeholder code by using %, the placeholder is not shown in CSS*/
+%shared {
+	background: green;
+	font-size: 1em;
+}
+.content {
+	/*the extend subsitutes the placeholder with the element you're editing*/
+	/*after or before the extend, it creates a new css class (including comments)*/
+	@extend %shared;
+}
+
+#parent %take .child {
+	background: black;
+}
+/*creates: #parent .sign .child, #parent .video .child, and #parent .video. img*/
+.sign, .video, .img {
+	@extend %take;
+}
+
+/*adds house, car, and the entire list's elements into the placeholder*/
+.house, .car, #{$list} {
+	@extend %take;
+}

@@ -1,0 +1,67 @@
+
+
+<html>
+
+    <head>
+        
+        <title>Draggable and Resizeable</title>
+ 
+		<!--Implement the jQuery API libraries-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="jquery-ui/jquery-ui.js"></script>
+        <link href="jquery-ui/jquery-ui.css" rel="stylesheet">
+        
+        <style type="text/css">
+            #resizable {
+                width: 100px;
+                height: 100px;
+                background-color: blue; 
+            }
+			
+            #also {
+                width: 100px;
+                height: 100px;
+                background-color: red;
+            }
+        </style>
+        
+    </head>
+
+    <body>
+	
+       <div id="draggable">Drag me horizontally!</div>
+	   
+	   <!--Creating a 400px width and 300px height yellow box-->
+        <div style="width:400px;height:300px;background-color:yellow">
+            <span>I'm stuck in the box!</span>
+        </div>
+        
+        <div id="resizable"></div>
+        <div id="also"></div>
+        
+        <script type="text/javascript">
+            
+		//only allow the draggable to be horizontally draggable
+           $("#draggable").draggable({ axis: "x" });    
+            
+		//allow the span to only be draggable within the contained div parent
+            $("span").draggable({containment: "parent"});
+            
+            $( "#resizable" ).resizable({
+                grid:50,//grid is how many pixels more the resizeable grows 
+                alsoResize: "#also", //resizes the also whenever resizing this item
+                resize: function( event, ui ) { //whenever resizing, make sure to check if width is not greater than 500
+                    if ($("#resizable").width() > 500) {     
+                        alert("big enough!")
+                    }
+                }
+            });
+            
+			//allow for the also id to be resizeable as much as you wish
+            $("#also").resizable();
+            
+        </script>
+        
+    </body>
+
+</html>

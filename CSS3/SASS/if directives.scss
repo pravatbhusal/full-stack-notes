@@ -1,0 +1,16 @@
+/*if statements return true or false
+we can compare statements with: ==, !=, <, >, <=, >= like any programming language*/
+
+$type: element;
+
+html {
+	/*check if $type is equal to element (for this example, it's true*/
+	@if $type == element {
+		content: "true";
+	/*if the above statement is not true, then use else if or else statements */
+	} @else if $type != element {
+		content: "false";
+	} @else {
+		content: "No idea...";
+	}
+}

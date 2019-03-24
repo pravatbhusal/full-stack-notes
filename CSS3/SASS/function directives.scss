@@ -1,0 +1,12 @@
+/*we can make our own functions and call them back if we wish
+the return sets the value of the function when its finished*/
+
+@function saySomething($speech) {
+	/*returns what was set in the argument*/
+	@return $speech;
+}
+
+html {
+	/*should equal to the speech*/
+	content: saySomething('hello');
+}

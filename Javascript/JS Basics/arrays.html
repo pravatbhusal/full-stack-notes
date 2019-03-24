@@ -1,0 +1,37 @@
+
+<html>
+
+    <head>
+        <title>Arrays</title>
+    </head>
+
+    <body>
+	
+        <script type="text/javascript">
+			
+			//create a new array object
+			var myArray = new Array();
+			
+			//set the first index to pizza
+			myArray[0] = "pizza";
+			myArray[1] = "chocolate";
+			
+			alert(myArray[0]); //alert the first array in the browser
+			console.log(myArray.length); //this is a console log to the console in inspect element (gets length of array)
+			
+			//this also declares and initializes an array:
+			var tweets = ["Morning Everybody!", "Hello World!"];
+			
+			tweets.push("Back to work."); //this adds another index to the array
+			alert(tweets[2]);
+			
+			/* Splice does not delete based on array index, it deletes based on the item number*/
+			tweets.splice(1, 1); //splice starts at the first item (which is Morning Everybody) and deletes 1 item after that index
+			alert(tweets);
+			
+			tweets.splice(1, 0, "Cornflacks for breakfast!", "Num Num"); //this adds a new items right after item number 1
+			alert(tweets);
+        </script>
+    </body>
+
+</html>

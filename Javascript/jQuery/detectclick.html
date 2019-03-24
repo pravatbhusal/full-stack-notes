@@ -1,0 +1,47 @@
+<html>
+	
+	<head>
+		<title>Detect Click</title>	
+		
+		 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		 <style type="text/css">	
+			#circle {
+				width: 150px;
+				height: 150px;
+				border-radius: 50%;
+				background-color: green;
+				margin: 10px;
+			}
+			
+			.square {
+				width: 150px;
+				height: 150px;
+				background-color: red;
+				margin: 10px;
+			}
+		 </style>
+	</head>
+	
+	<body>
+	
+	<div id="circle"></div>
+	<div class="square"></div>
+	<div class="square"></div>
+	
+	<script type="text/javascript">
+		//the dollar sign means a string character
+		
+		//this means when the circle is clicked (it's a lot shorter than the regular js when clicking)
+		$("#circle").click(function() {
+			alert("Circle was clicked!");
+		});
+		
+		//whenever a div is clicked, it will say a div was clicked!
+		$("div").click(function () {
+			alert("A div was clicked!");
+		});
+	</script>
+	
+	</body>
+
+</html>

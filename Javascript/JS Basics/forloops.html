@@ -1,0 +1,27 @@
+
+
+<html>
+    <head>
+        <title>For Loops</title>
+    
+    </head>
+    <body>
+	
+        <div id="tweetDiv"></div>
+		
+        <script type="text/javascript">
+            var tweetString = "";
+            var tweets = ["Hi everyone!", "I love cornflakes!", "Night night :)", "Sweet dreams!"];
+			
+			//this for loop iterates through each index of the tweets array
+            for (var i = 0; i < tweets.length; i++) {
+			//keep updating the string with the new indexes and seperate each new tweet with a paragraph
+                tweetString += "<p>" + tweets[i] + "</p>";
+            }
+			
+            document.getElementById("tweetDiv").innerHTML = tweetString;
+        </script>
+        
+    </body>
+
+</html>

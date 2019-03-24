@@ -1,0 +1,52 @@
+<html>
+	
+	<head>
+		<title>Change Style</title>	
+		
+		 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		 
+		 <style type="text/css">	
+			#circle {
+				width: 150px;
+				height: 150px;
+				border-radius: 50%;
+				background-color: green;
+				margin: 10px;
+			}
+			#square {
+				width: 150px;
+				height: 150px;
+				background-color: red;
+				margin: 10px;
+			}
+		 </style>
+	</head>
+	
+	<body>
+	
+	<div id="circle"></div>
+	<div id="square"></div>
+	
+	<script type="text/javascript">
+		
+		//whenever a div is clicked, the css will change
+		$("div").click(function () {
+			$("#circle").css("width", "400px");
+			$("#circle").css("height", "400px");
+			$("#circle").css("background-color", "red");
+			
+			//alert the user of the css width
+			alert("The circle has a " + $("#circle").css("width") + " width.");
+			
+			//the this keyword would allow us to observe specific content that was configured/listened to
+			if($(this).attr("id") == "circle"){
+				alert("You clicked the circle.");
+			} else {
+				alert("You clicked the square.");
+			}
+		});
+	</script>
+		
+	</body>
+
+</html>

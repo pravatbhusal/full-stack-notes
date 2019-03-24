@@ -1,0 +1,25 @@
+<html>
+	
+	<head>
+		<title>Send Post from JS</title>	
+	</head>
+	
+	<body>
+	
+	<!--Send variables to a PHP file via post and only call it when we want to in Javascript.-->
+	<form method="POST" action="receivePostJS.php" id="DeleteUserForm">
+	Username: <input type="text" name="username">
+	</form>
+	
+	<button id="sendVariables">Send Variables to PHP</button>
+	
+	<script type="text/javascript">
+		//click the button, then Javascript will load the PHP page with the POST contents.
+		document.getElementById("sendVariables").onclick = function() {
+			document.getElementById("DeleteUserForm").submit();
+		}
+	</script>
+	
+	</body>
+
+</html>

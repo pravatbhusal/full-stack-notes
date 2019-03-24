@@ -1,0 +1,67 @@
+
+
+<html>
+
+    <head>
+        
+        <title>While Loops</title>
+    
+    </head>
+
+    <body>
+    
+        <p>How many fingers are you holding up?</p>
+        
+		<!--Create selectable options for you to choose from-->
+        <p>
+            <select id="myNumber">
+                <option>0</option>
+                
+                <option>1</option>
+                
+                <option>2</option>
+                
+                <option>3</option>
+                
+                <option>4</option>
+                
+                <option>5</option>
+            </select>
+			
+            <button id="guess">Guess!</button>
+
+        </p>
+        
+        <script type="text/javascript">
+            
+            document.getElementById("guess").onclick = function() {
+                
+				//get the value of the selected option
+                var myNumber = document.getElementById("myNumber").value;
+				
+                var gotIt = false;
+				
+				//the computer requires at least 1 guess, so the default guess is 1
+                var numberOfGuesses = 1;
+                
+				//while the computer still hasn't gotten the value
+                while (gotIt == false) {
+                
+					//the computer chooses a random value from 0 to 5
+                    var guess = Math.floor(Math.random()*6);
+					
+					//if the computer had a correct guess, then congrats to the computer!
+                    if (guess == myNumber) {
+                        gotIt = true;
+                        alert ("Got it! It was a " + guess + ". It took me " + numberOfGuesses + " guesses.");
+                    } else {
+					//if the random generated number is not the number you picked, then add an extra guess
+                        numberOfGuesses++;
+                    }
+                }
+            }    
+        </script>
+        
+    </body>
+
+</html>

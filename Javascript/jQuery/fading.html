@@ -1,0 +1,50 @@
+<html>
+	
+	<head>
+		<title>Fading</title>	
+		
+		 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		 
+		 <style type="text/css">	
+			#circle {
+				width: 150px;
+				height: 150px;
+				border-radius: 50%;
+				background-color: green;
+				margin: 10px;
+			}
+		 </style>
+	</head>
+	
+	<body>
+	
+	<div id="circle"></div>
+	<button id="fadeBTN">Fade out</button>
+	<button id="fadeinBTN">Fade in</button>
+	<button id="togglefade">Toggle</button>
+	
+	<script type="text/javascript">
+	//whenever you click the fade out button, then it will fadeout the circle slowly
+		$("#fadeBTN").click(function() {
+		//once the circle has faded out, then it's gone and the display is none.
+			$("#circle").fadeOut();
+		});
+		
+		$("#fadeinBTN").click(function() {
+		//immediately the circle starts to fadein
+			$("#circle").fadeIn();
+		});
+		
+		$("#togglefade").click(function() {	
+		//if the display of the object is invisible, then let it fadein within 0.5 seconds else let it fadeout in 0.5 seconds
+			if($("#circle").css("display") == "none") {
+				$("#circle").fadeIn(500);
+			} else {
+				$("#circle").fadeOut(500);
+			}
+		});
+	</script>
+		
+	</body>
+
+</html>

@@ -1,0 +1,47 @@
+/* List functions and how they can add functionality to a List datatype */
+
+$List1: 20px;
+$List2: 1px 2px 3px black;
+$NestedList: 1px 2px 3px green, 6px 7px 8px blue, 3px 2px 1px yellow;
+
+html {
+	/*tells us how long a list is */
+	/*outputs 1*/
+	background: length($List1);
+	/* outputs 2*/
+	background: length($List2);
+	/* outputs 3 (gets the 3 nested lists in the root-level list)*/
+	background: length($NestedList);
+	
+	/*gets a specific index from a list*/
+	/*gets the 2nd item (does NOT start at 0) in the list: 6px 7px 8px blue*/
+	background: nth($NestedList, 2);
+	
+	/*sets a specific index from a list*/
+	/*changes the 2nd item in the list to 1em*/
+	background: set-nth($NestedList, 2, 1em);
+	
+	/*returns the separator for a list for the root-level (space or comma)*/
+	/*should return commas*/
+	background: list-separator($NestedList);
+	
+	/*joins lists and values together and uses the separator based on the first argument's list*/
+	/*third argument specifies which separator it should be (space or comma)*/
+	background: join($List2, $NestedList, comma);
+	
+	/*appends an item to the back of a list*/
+	background: append($NestedList, 'appended at the end');
+	
+	/*gets the index of a specific value in a list */
+	background: index($List2, 1px);
+	
+	/*combines several lists to multi-dimensional lists*/
+	background: zip (
+		1px 2px 3px 4px,
+		1em 2em 3em 4em,
+		black green blue red
+	);
+	
+	/*you can also call zip in separate variables*/
+	background: zip($List1, $List2);
+}

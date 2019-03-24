@@ -1,0 +1,31 @@
+body {
+	background: #6FCF97;
+}
+
+@keyframes backgroundFade {
+	0% {
+		background: #6FCF97;
+	}
+
+	25% {
+		background: #6FCF97;
+	}
+
+	50% {
+		background: #278EAE;
+	}
+
+	75% {
+		background: #6FCF97;
+	}
+
+	100% {
+		background: #6FCF97;
+	}
+}
+
+.backgroundFade {
+	animation: backgroundFade;
+	animation-duration: 30s;
+	animation-iteration-count: infinite;
+}

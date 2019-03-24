@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Layout and Calculations</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+  <!--webkit is google chrome, internet explorer, opera-->
+  <!--moz is for mozilla firefox-->
+  <style>
+  #multi-column {
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
+
+    -webkit-column-gap: 40px;
+    -moz-column-gap: 40px;
+    column-gap: 40px;
+
+    -webkit-column-rule-style: solid;
+    -moz-column-rule-style: solid;
+    column-rule-style: solid;
+
+    -webkit-column-rule-width: 1px;
+    -moz-column-rule-width: 1px;
+    column-rule-width: 1px;
+
+    -webkit-column-rule-color: grey;
+    -moz-column-rule-color: grey;
+    column-rule-color: grey;
+  }
+
+  h2 {
+    -webkit-column-span: all;
+    column-span: all;
+  }
+
+  header {
+    width: 100%;
+    height: 50px;
+    background-color: grey;
+  }
+
+  body {
+    margin: 0;
+  }
+
+  #container {
+    width:100%;
+    background-color: yellow;
+    height: -webkit-calc(100% - 50px);
+    height: calc(100% - 50px);
+    position: absolute;
+  }
+
+  .flexbox-container {
+    display: flex;
+    display: -webkit-flex;
+    width: 100%;
+    height: 500px;
+    background-color: aqua;
+    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    /*flex-direction: column;
+    -webkit-flex-direction: column;*/
+  }
+
+  .flexbox-item {
+    background-color: bisque;
+    width:100px;
+    height:100px;
+    margin: 10px;
+    box-sizing: border-box;
+  }
+  </style>
+
+</head>
+
+
+<body>
+
+  <header></header>
+
+  <div id="container">
+    <div class="flexbox-container">
+      <div class="flexbox-item">Item 1</div>
+      <div class="flexbox-item" style="border: 5px solid grey; padding:10px">Item 2</div>
+      <div class="flexbox-item">Item 3</div>
+      <div class="flexbox-item">Item 4</div>
+      <div class="flexbox-item">Item 5</div>
+      <div class="flexbox-item">Item 6</div>
+      <div class="flexbox-item">Item 7</div>
+    </div>
+
+
+  </div>
+
+  <div id="multi-column">
+    <h2>News For Nerds</h2>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vitae metus vehicula, blandit lectus quis, molestie risus. Donec tincidunt condimentum erat, sit amet posuere erat viverra ut. Aliquam erat volutpat. Sed et mauris sed tellus ultrices fermentum vitae eu orci. Nulla quis metus ut magna blandit congue. Phasellus vel tincidunt purus, id egestas ante. Integer id laoreet enim, a efficitur tortor. Donec vitae bibendum justo. Phasellus eget libero vehicula, pulvinar nibh sed, facilisis urna. Aenean orci massa, lacinia non mi id, tincidunt ornare neque. Nam maximus nunc id arcu pretium posuere. Mauris luctus ligula eu dui gravida tincidunt.<br><br>
+    Etiam luctus purus eget est ultrices tincidunt. Quisque scelerisque nisl cursus, varius eros eget, consectetur libero. Morbi mattis odio ac metus commodo elementum eget eget urna. In ipsum felis, maximus vel justo congue, scelerisque eleifend leo. Cras lobortis eros odio, eleifend posuere turpis lobortis at. Integer lobortis, mauris eget iaculis feugiat, augue urna molestie ex, in maximus diam libero eget elit. Etiam vitae convallis massa, eget dictum mauris. Mauris non lectus nisi. Vivamus non porttitor massa. Duis finibus urna vel quam volutpat, ac eleifend ipsum efficitur. Maecenas sed nisl id massa sollicitudin tempus vel et erat.<br><br>
+    Quisque mattis fermentum risus vitae euismod. Aliquam eleifend dui sit amet diam dignissim scelerisque. Praesent malesuada felis at vestibulum imperdiet. Quisque eu volutpat odio, imperdiet sollicitudin elit. Pellentesque sed lorem sit amet augue gravida mollis sit amet eget est. Aenean bibendum suscipit sapien id viverra. Nunc ullamcorper scelerisque felis a maximus.
+  </div>
+
+</body>
+
+</html>

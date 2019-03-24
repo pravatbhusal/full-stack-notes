@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Psuedo Classes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+      
+	  <!--classes use colons, and they're specific styles of an element-->
+      <style>
+          a:hover { 
+              text-decoration: underline;
+          }
+          
+          input:focus {
+              background-color: blue;
+          }
+          
+          input:enabled {}
+          input:disabled {}
+          input:checked {}
+          
+          p:first-child {
+              color:aquamarine;
+          }
+          
+          p:last-child {
+              font-size: 150%;
+          }
+          
+          p:only-child {
+              font-weight: bold;
+          }
+          
+          p:first-of-type {
+              text-decoration: underline;
+          }
+          
+          /* last-of-type and only-of-type also allowed */
+          
+          tr:nth-child(2n-1) {
+              background-color: green;
+          }
+          
+          /* nth-last-child - count backwards! 
+             nth-of-type - only count a certain type
+          */
+          
+          div:empty {
+              display:none;
+          }
+          
+          p:not(.green) {
+              color: blue;
+          }
+          
+          :not(div) {}
+          
+          p:first-letter {
+              font-size: 120%;
+          }
+          
+          /* :first-line also allowed */
+          
+          a:after {
+              content: " ("attr(href)")";
+              text-decoration: none;
+          }
+      </style>
+      
+  </head>
+    
+  
+  <body>
+      
+      <h1>I am a heading</h1>
+      
+      <div>
+        <h3>I'm an h3 element</h3>
+        <p class="green">I am a paragraph.</p>
+        <a id="blue" target="_blank" href="11.2.html">I am a link</a>
+        <p>I'm in the div.</p>
+      </div>
+      
+      <div>
+        <p>I'm in another div</p>
+      </div>
+	  
+      <p>I am outside the div</p>
+      <a  href="http://www.google.com">I'm another link</a>
+	  
+      <input>
+      
+      <table>
+		   <tr><td>Rob</td></tr>
+           <tr><td>Kirsten</td></tr>
+           <tr><td>Tommy</td></tr>
+           <tr><td>Ralphie</td></tr>
+      </table>
+  </body>
+    
+</html>

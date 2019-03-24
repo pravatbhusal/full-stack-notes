@@ -1,0 +1,25 @@
+
+<html>
+
+    <head>
+        <title>JSON and Objects</title>
+    </head>
+
+    <body>
+        <script type="text/javascript">
+			//a variable or return type can contain an object, and this can also be JSON stringified like an array
+			var objectExample = {
+				firstName: "Pravat",
+				lastName: "Bhusal"
+			};
+			
+			//convert the object to a stringed JSON
+			var jsonObjectExample = JSON.stringify(objectExample);
+			
+			//parsing the JSON
+			var jsonParsed = JSON.parse(jsonObjectExample);
+			console.log(jsonParsed.firstName); //outputs: Pravat
+        </script>
+    </body>
+
+</html>

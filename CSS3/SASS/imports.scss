@@ -1,0 +1,9 @@
+/* Similar to Java, allows us to import css files from internal/external sources */
+/*Imports the 3 different css,scss, and sass files from the local file directory*/
+@import 'import.css';
+/*The reason as to why we have a _ in the file names is so that SaSS does not convert them into CSS files and
+only use them to be imported by other files. These are called 'partials'*/
+@import '_import.scss';
+@import '_import.sass';
+
+/*Now all the data from each files are imported and we can utilize the variables, mixins, placeholders in this file */

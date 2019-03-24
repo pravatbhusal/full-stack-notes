@@ -1,0 +1,49 @@
+<html>
+<body>
+  <header>
+    <!--socket.io client-side dependencies-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.1/socket.io.dev.js"></script>
+  </header>
+  <main>
+    <button onclick="sendMessage()">Send Emit Hello</button>
+    <button onclick="sendBroadcast()">Send Broadcast Hello</button>
+  </main>
+  <footer>
+  </footer>
+  <script>
+    //make a socket connection to homepage
+    var socket = io.connect("http://localhost:3000");
+
+    function sendMessage() {
+      //send a chat emit to the server
+      socket.emit('chat', {
+        message: "This is a hello message from another client!",
+        handle: "handleHello"
+      });
+    }
+
+    function sendBroadcast() {
+      //send a broadcast emit to the server
+      socket.emit('broadcast', {
+        message: "This is a broadcast message from another client!",
+        handle: "handleBroadcast"
+      });
+    }
+
+    //listen for the chat emit from the server
+    socket.on('chat', (data) => {
+      console.log(data.handle + ": " + data.message);
+    });
+
+    //listen for the broadcast from the server
+    socket.on('broadcast', (data) => {
+      console.log(data.handle + ": " + data.message);
+    });
+
+    //listen for the welcome from the server
+    socket.on('welcome', (data) => {
+      console.log(data);
+    });
+  </script>
+</body>
+</html>

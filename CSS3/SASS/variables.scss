@@ -1,0 +1,37 @@
+/*To declare a variable, we use a dollar sign*/
+
+/*We can add the semi-colon in SCSS which breaks lines (as seen below)*/
+$width : 600px;          $float: 1.5;            $int: 20;
+
+/*Strings (can use '', "", or blank to initialize a String. it's advised to use "" or '' because spaces cause lists)*/
+$string : '../images/hello.jpg';
+$stringTwo :  "../images/hello.jpg";
+$stringThree :  no-repeat;
+$stringSelector :  element;
+
+/*Colors*/
+$colString : gray;
+$hex : #ccc;
+$rgb : rgb(230,230,230);
+$rgba : rgba(230,230,230,.2);
+
+/*Arrays (we have 2 indexes for this example)*/
+$list : 1px 1px 3px black,  
+		3px 3px 4px #ccc;
+
+/*Object (Map) variable <- Allows for a key and value*/
+$map: ("key1": "value1", "color": blue);
+
+/*Boolean variable*/
+$bool: true;
+
+/*Null-type variable*/
+$null: null;
+
+/*Using the variables, also the use of #{$var} allows us to substitute a variable's element for use as an identifier*/
+div .#{ $stringSelector } {
+      width: $width;
+      line-height: $int;
+      background: url($string) $stringThree $rgba ;
+      box-shadow: $list;
+}

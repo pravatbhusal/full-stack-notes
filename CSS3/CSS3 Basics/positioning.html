@@ -1,0 +1,46 @@
+
+<html>
+
+    <head>
+        
+        <title>Positioning</title>
+    
+		<!--Position relative means to be in the regular HTML5 position and will flow.-->
+		<!--Position absolute will NOT flow the HTML items-->
+		<!--Position fixed is the same as absolute but WILL NOT MOVE WHEN PAGE IS SCROLLED UP/DOWN-->
+		
+		<!--NOTE: Top and Left can only be used properly in position: absolute-->
+		<!--Left 200 pixels means you move 200 pixels to the right-->
+		<!--Left -200 pixels means you move 200 pixels to the left-->
+		<!--Top 100 pixels moves it 100 pixels down-->
+		<!--Top -100 pixels moves it 100 pixels up-->
+		<!--Z-index allows for certain HTML properties to be in front or behind items. The higher the z, the more overlap.-->
+		<!--Opacity is like Alpha for Flash. 0 = invisible while 1 = completely solid-->
+        <style type="text/css">
+			.position1 {
+				position: relative;
+				z-index: 1;
+			}
+			.position2 {
+				position: fixed;
+				z-index: 2;
+			}
+			.position3 {
+				position: absolute;
+				left: 500px;
+				top 200px;
+				opacity: 0.5;
+				z-index: 3;
+			}
+        </style>
+    
+    </head>
+
+    <body>
+	<!--If you want everything to be easy to position, then put them all in divs-->
+		<div class="position1">Position 1</div>
+		<div class="position2">Position 2</div>
+		<div class="position3">Position 3</div>
+    </body>
+
+</html>

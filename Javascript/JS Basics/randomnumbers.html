@@ -1,0 +1,29 @@
+
+<html>
+
+    <head>
+        <title>Random Numbers</title>
+    </head>
+	
+    <body>
+	
+		<p>How many fingers am I holding?</p>
+		<input type="text" id="inputText">
+		<p><button id="guessBTN">Guess!</button></p>
+		
+        <script type="text/javascript">
+		
+			document.getElementById("guessBTN").onclick = function () {
+			//this gets a random number from 1 to 5. We add 1 to not get 0 and have a possbility of getting 5.
+			var randomNumber = Math.floor(Math.random()*5 + 1);
+			if(document.getElementById("inputText").value == randomNumber) {
+				alert("You got it correct!");
+			} else {
+				alert("You got it wrong... The value was " + randomNumber);
+			}
+		}
+        </script>
+        
+    </body>
+
+</html>

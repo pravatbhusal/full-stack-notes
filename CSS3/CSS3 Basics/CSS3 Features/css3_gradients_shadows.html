@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Gradients and Shadows</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+      
+      <style>
+          #gradient {
+              width: 500px;
+              height: 200px;
+              background: linear-gradient(to top left, white, red, green, blue);
+          }
+       
+          #radialgradient {
+              width: 500px;
+              height: 200px;
+              background: radial-gradient(white, blue);
+          }
+          
+          #challengegradient {
+              width: 500px;
+              height: 200px;
+              background: linear-gradient(to bottom left, green, yellow);
+          }
+          
+          h2 {
+              text-shadow: 2px 2px 4px green, -5px -5px 4px yellow;
+              color: white;
+          }
+          
+          h3 {
+              text-shadow: 0 0 5px red;
+          }
+          
+          #shadow {
+              width: 200px;
+              height: 200px;
+              box-shadow: 12px 12px 6px grey;
+              background-color: antiquewhite;
+          }
+      </style>
+      
+  </head>
+    
+  
+  <body>
+      
+        <h2>This text will have a shadow</h2>
+      
+        <h3>This text will glow.</h3>
+      
+        <div id="shadow"></div>
+      
+        <div id="gradient"><h1>This is a gradient</h1></div>
+      
+        <div id="radialgradient"></div>
+      
+        <div id="challengegradient"></div>
+      
+  </body>
+    
+</html>

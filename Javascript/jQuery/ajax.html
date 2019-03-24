@@ -1,0 +1,36 @@
+<html>
+	
+	<head>
+		<title>Ajax</title>	
+		
+		 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		 
+		 <style type="text/css">	
+			
+		 </style>
+	</head>
+	
+	<body>
+	
+	<p></p>
+	
+	<!--AJAX REQUIRES A WEBSERVER TO RUN-->
+	
+	<script type="text/javascript">
+	
+		//this gets the data from the info.txt file, but that's all.
+		$.get("info.txt", function(data) {
+			alert(data);
+		});
+		
+		//ajax allows us to do the same thing but this time with a fail function
+		$.ajax("info.txt").done(function(data) {     
+         $("p").html(data);      
+         }).fail(function() { //if we failed to get the data    
+          alert("Could not get data!");   
+		});
+		  
+	</script>
+	</body>
+
+</html>

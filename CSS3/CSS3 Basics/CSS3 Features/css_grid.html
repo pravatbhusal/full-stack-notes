@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>CSS Grid</title>
+  <style>
+    /*making our CSS grid*/
+
+    .wrapper {
+      display: grid;
+      /* define the columns of the grid as 70% then 30% each row*/
+      grid-template-columns: 70% 30%;
+      /* define the columns as fr (fractional)*/
+      grid-template-columns: 1fr 6fr 1fr;
+      /*repeats the columns for 3 of 1 frs*/
+      grid-template-columns: repeat(3, 1fr);
+      /*define the rows of the grid for 3 of 1 frs*/
+      grid-template-rows: repeat(3, 1fr);
+      /*adds a gap between columns*/
+      grid-column-gap: 1em;
+      /*adds a gap between rows*/
+      grid-row-gap: 1em;
+      /*adds a gap between rows and columns*/
+      grid-gap: 1em;
+      /*the rows in the grid are set to a fixed height*/
+      grid-auto-rows: 100px;
+      /*the rows in the grid are set to a fixed height of 100px and auto*/
+      grid-auto-rows: minmax(100px, auto);
+      /*the columns in the grid are set to a fixed width of 100px and auto*/
+      grid-auto-columns: minmax(100px, auto);
+      /*justifies (horizontal) or aligns (vertical) the wrapper items
+       types: start, center, end, stretch (default)*/
+      justify-items: start;
+      align-items: start;
+    }
+
+    #test1 {
+      /*we can also justify or align specific items*/
+      align-self: start;
+      justify-self: start;
+    }
+
+    #test2 {
+      align-self: stretch;
+      justify-self: stretch;
+      /*grid area is used to specify exactly where an item is placed
+      syntax: grid-row-start / grid-column-start / grid-row-end / grid-column-end.
+      this example: "test2" starts on row 3 column 1, and span 1 row and 2 columns:*/
+      grid-area: 3 / 1 / span 1 / span 2;
+    }
+
+    #test3 {
+      align-self: center;
+      justify-self: start;
+      /*sets a specific column or row area
+      syntax: grid-start / grid-end
+      this also allows us to overlap some items*/
+      grid-column: 1 / 2;
+      grid-row: 1 / 2;
+    }
+
+    .wrapper div {
+      background: #eee;
+      padding: 1em;
+    }
+
+    /*every odd child in the wrapper has a grayer background*/
+
+    .wrapper div:nth-child(odd) {
+      background: #ddd;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div id="test1">
+      test1
+    </div>
+    <div id="test2">
+      test2
+    </div>
+    <div id="test3">
+      test3
+    </div>
+  </div>
+</body>
+
+<script>
+</script>
+
+</html>

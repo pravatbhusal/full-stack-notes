@@ -1,0 +1,15 @@
+{
+  "name": "basics",
+  "version": "1.0.0",
+  "description": "The basics of ExpressJS",
+  "main": "app.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Shadowsych",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3"
+  }
+}

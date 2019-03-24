@@ -1,0 +1,38 @@
+<html>
+	<head>
+	<!--Only the top and left can be used for a div-->
+	<!--To move a non-div item right, use margin-right and vice-versa-->
+		<style>
+	#wrapper {
+        position: relative;
+		width: 75px;
+        height: 80px;
+		background-color: black;
+		float: left;
+		margin-right: 100px;
+      }
+	  #inner-text {
+		color: white;
+		font-size: 17px;
+		text-align: center;
+	  }
+	  #inner-button {
+		margin-left: 15px;
+		height: 25px;
+		background-color: white;
+	  }
+		</style>
+	</head>
+	
+<body>
+	<div id="wrapper">
+	<p id="inner-text">Text</p>
+	<button id="inner-button">Hello</button>
+	</div>
+	
+	<div id="wrapper">
+	<p id="inner-text">I really hate CSS.</p>
+	</div>
+</body>
+
+</html>

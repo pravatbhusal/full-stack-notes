@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Canvas</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+   
+	<style>
+		#myCanvas {
+			border: 1px solid grey;
+		}
+	</style>
+  </head>
+
+  <body>
+      
+	  <!--declaring a canvas-->
+	  <canvas id="myCanvas" width="500" height="400"></canvas>
+	  
+      <script>
+		var myCanvas = document.getElementById("myCanvas");
+		var context = myCanvas.getContext("2d"); //create a new context (item) in 2d
+		var gradient = context.createLinearGradient(0,0,100,50); //creates gradient on the rectangle 
+		gradient.addColorStop(0, "white"); //add color to the top left
+		gradient.addColorStop(1, "red"); //add color to the bottom right
+		
+		//rectangles
+		context.fillStyle = gradient; //style the gradient color
+		context.fillRect(0, 0, 100 ,50); //fills the content up as a rectangle (x,y width, height)
+		//context.clearRect(0, 0, myCanvas.width, myCanvas.height); clears the rectangle (if we want to)
+		
+		//lines
+		context.moveTo(0, 400); //moves the context to the bottom left
+		context.lineTo(500, 0); //creates a diagnol line from the current location to the specified coordinates
+		context.lineWidth = 20; //20 pixels thick
+		context.strokeStyle = "#F42924" //style a red item
+		context.stroke(); //draws the line
+		
+		//circles
+		context.beginPath();
+		context.arc(100, 100, 50, 0, 2*Math.PI); //x,y, radius, start angle (radians), end angle (radians) <- gets full circle
+		context.lineWidth = 1;
+		context.stroke();
+		
+		//text
+		context.fillStyle = "black"; //color
+		context.font = "20px Arial";
+		context.fillText("My Canvas", 200, 50); //200 to the right, 50 below
+	  </script>
+  </body>
+</html>

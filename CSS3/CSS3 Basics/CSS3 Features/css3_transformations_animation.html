@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Transformations and Animations</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+      
+	  <!--transition means how long it takes for a transformation to occur-->
+	  <!--"ease-in-out" gives a bouncy transition, "linear" transition is more smooth, "ease-in" is in-between those 2-->
+      <style>
+          #box {
+              width: 100px;
+              height: 100px;
+              background-color: red;
+              border-radius: 10px;
+              transition: 1s ease-in-out;
+              display: flex;
+          }
+          
+          #box:hover {
+              transform: rotate(40deg); //rotates the item by 40 degrees
+              //transform: scale(2, 4); //increases the scale (width, height)
+              //transform: skew(20deg, 30deg); //stretches from 2 different directions
+              //transform: rotateZ(180deg); //comes out of the screen (just circles it around)...
+			  //transform: rotateX(180deg); //flips the item around horizontal-axis
+			  //transform: rotateY(180deg); //flips the item around vertical-axis
+              //transform: translate(100px, 100px);
+          }
+      </style>
+  </head>
+  
+  <body>
+       <div id="box"></div>
+  </body>
+    
+</html>

@@ -1,0 +1,47 @@
+<html lang="en">
+  <head>
+  
+  <!--https://v4-alpha.getbootstrap.com/components/scrollspy/-->
+	<title>Scroll Spy</title>
+    <meta charset="utf-8" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
+	<style type="text/css">
+		body {
+			position: relative;
+		}
+		#one {
+         margin-top:70px;
+		}
+	</style>
+	
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+  </head>
+  
+  <!--We set the body tag to be the thing that is spyed on whenever we're scrolling-->
+  <!--Data-offset allows us to offset from the top (goes down more) pixels whenever calculating the scroll-->
+	<body data-spy="scroll" data-target="#navbar-example" data-offset="70">
+	
+	<!--The fixed-top class allows the navbar to be fixed onto the top-->
+	    <nav class="navbar navbar-default bg-faded fixed-top" id="navbar-example">
+		<!--For the scrollspy, the components of the navbar must be in a ul-->
+			<ul class="nav nav-tabs" role="tablist">
+				<li><a class="nav-link active" href="#one">Active</a></li>
+				<li><a class="nav-link" href="#two">Link</a></li>
+				<li><a class="nav-link" href="#three">Link</a></li>
+				<li><a class="nav-link disabled" href="#four">Disabled</a></li>
+			</ul>
+		</nav>
+		
+	<!--Note: we gave the id: one a margin-top of 70 pixels because the navbar was covering it-->
+	<h2 id="one">Section 1</h2><h3>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</h3>
+	<h2 id="two">Section 2</h2><h3>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</h3>
+	<h2 id="three">Section 3</h2><h3>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</h3>
+	<h2 id="four">Section 4</h2><h3>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</h3>
+	
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+	  
+  </body>
+</html>

@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Others</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+	
+	<script>
+		document.createElement("container"); //we can also create our own elements in js!
+	</script>
+	
+	<style>
+		article {
+			color: green;
+		}
+		
+		header, footer, article, section, nav, menu {
+			display: block;
+		}
+	</style>
+  </head>
+
+  <body>
+  <!--like bootstrap, it's used for articles-->
+		<article>
+			I'm an article!
+		</article>
+		
+   <!--custom element-->
+		<container>
+			I'm a container!
+		</container>
+	
+		<figure>
+			<!--we can even add data attributes using the "data-foo"-->
+			<img src="https://vignette3.wikia.nocookie.net/simpsons/images/6/6c/MaggieSimpson.PNG
+			/revision/latest?cb=20170101014602" data-description="Baby" id="baby" alt="Maggie Simpson"> <!--shows image, and all images should have an alt tag-->
+			<!--figcaption has items below a picture-->
+			<figcaption>
+			<!--mark is a highlighter, and small means smaller text-->
+				<p><mark>Maggie Simpson</mark><small>Wikipedia</small></p>
+			</figcaption>
+		</figure>
+		
+		<!--the range type is a slider. the step is how big of a step you can do whenever sliding-->
+		<input type="range" min="0" max="100" step="10">
+		
+		<!--allows any content within the div to be editiable!-->
+		<div contentEditable="true">
+			Hello, this is some text.
+		</div>
+		<!--nice un-ordered list that is content editable!-->
+		<ul contentEditable="true">
+			<li>Hello</li>
+		</ul>
+		
+      <script>
+		var baby = document.getElementById("baby").getAttribute("data-description");
+		alert(baby); //will alert "Baby" from the HTML data attribute
+      </script>
+   
+  </body>
+</html>

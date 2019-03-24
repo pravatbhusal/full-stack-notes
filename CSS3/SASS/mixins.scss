@@ -1,0 +1,40 @@
+/* Mixings are parsed before the SaSS is compiled to CSS.*/
+/* These can be CSS, SASS, or anything mixed.*/
+/* Mixins are basically functions: we can add arguments to the mixin */
+
+$color: blue;
+
+@mixin nameOfMixin($argOne) {
+	/*we can specify which id/class for an included mixin (for this example, body #main)*/
+	#main {
+		color: $argOne;
+		background: green;
+		line-height: 1.8;
+	}
+}
+
+/*this mixin allows for an argument with commas (since some properties in css require commas)*/
+@mixin boxShadow($shadow...) {
+	-webkit-box-shadow: $shadow;
+}
+
+body {
+	color: green;
+	width: 200px;
+	@include nameOfMixin($color);
+	@include boxShadow(1px 2px 3px red, 1px 2px 3px black);
+}
+
+/* Allow for mixings with content */
+@mixin keyFrames($name) {
+	/*The webkit key frame name will be "myAnim" and we can do this because we used #{$var}*/
+	@-webkit-box-keyframe #{$name} {
+		/*adds the content from the include*/
+		@content
+	}
+}
+
+@include keyFrames('myAnim') {
+	0% {opacity: 1}
+	100% {opacity: 0}
+}

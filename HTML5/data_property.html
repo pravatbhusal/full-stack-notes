@@ -1,0 +1,21 @@
+<html>
+	
+	<head>
+		<title>Data Property</title>	
+	</head>
+	
+	<body>
+	<!--we're setting a data property of "name" equal to "Pravat"-->
+		<h1 id="irlName" data-name="Pravat">Pravat Bhusal</h1>
+	</body>
+	
+	<script>
+		var dataName = document.querySelector("#irlName");
+		//get the data value within data-name
+		alert(dataName.getAttribute("data-name"));
+		
+		//we can set the data as well
+		dataName.setAttribute("data-name", "hello world");
+	</script>
+
+</html>

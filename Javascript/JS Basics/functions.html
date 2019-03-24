@@ -1,0 +1,67 @@
+
+
+<html>
+
+    <head>
+        
+        <title>Functions</title>
+    
+    </head>
+
+    <body>
+        <p>How many fingers are you holding up?</p>
+		<!--Create a selector with 5 options-->
+        <p>
+            <select id="myNumber">
+                
+                <option>0</option>
+                
+                <option>1</option>
+                
+                <option>2</option>
+                
+                <option>3</option>
+                
+                <option>4</option>
+                
+                <option>5</option>
+            
+            </select>
+            <button id="guess">Guess!</button>
+        
+        </p>
+        
+        <script type="text/javascript">
+            
+            function doAGuess(correctAnswer) {
+				//get a random number from 0 to 5
+				var guess = Math.floor(Math.random()*6);
+                   if (guess == correctAnswer) {
+                        return (true);
+                   } else {
+                        return(false);
+                   }
+            }
+			
+            document.getElementById("guess").onclick = function() {
+                var myNumber = document.getElementById("myNumber").value;
+                var gotIt = false;
+                var numberOfGuesses = 1;
+				
+                while (gotIt == false) {
+				//this time, we can plug the myNumber variable into the function's parameter and check if random guessed number matches
+                    if (doAGuess(myNumber) == true) {       
+                        gotIt = true;
+                        alert ("Got it! It was a " + myNumber + ". It took me " + numberOfGuesses + " guesses.");
+                    } else {
+                        numberOfGuesses++; //if the random guessed number did not match, then add more to the attempted guesses variable
+                    }
+                }
+            }
+            
+            
+        </script>
+        
+    </body>
+
+</html>

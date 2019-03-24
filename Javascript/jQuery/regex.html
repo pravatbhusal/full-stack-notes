@@ -1,0 +1,29 @@
+<html>
+	
+	<head>
+		<title>Regular Expressions</title>	
+		
+		 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		 
+		 <style type="text/css">
+			
+		 </style>
+	</head>
+	
+	<body>
+	
+	<script type="text/javascript">
+	
+		//the slashes between the string means this is a regex. the i means that the regex will be case-insensitive
+		//having a g instead of an i after the slash means it will check how many of that string appears using an array format
+		var regex = /is/i;
+		var string = "Regex Is great!";
+		
+		//this will check if the string has the string of "is" and it is case-insensitive
+		var result = string.match(regex);
+		alert(result); //returns what it finds (the return is "Is") if couldn't find anything, it returns null
+	</script>
+		
+	</body>
+
+</html>

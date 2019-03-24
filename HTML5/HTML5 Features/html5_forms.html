@@ -1,0 +1,45 @@
+<html>
+	
+	<head>
+		<title>HTML5 Forms</title>	
+	</head>
+	
+	<body>
+		<form id="myForm" action="processform.php">
+		<!--placeholder is actually html5!-->
+			<p>Name: <input type="text" placeholder="Insert Name Here"></p>
+		<!--autofocus starts the form with a particular input text-->
+			<p>Autofocus: <input type="text" autofocus></p>
+		<!--autocomplete feature, default is on! (ex: password and email autocomplete on some websites)-->
+			<p>Autocomplete: <input type="text" autocomplete="off"></p>
+		<!--required tag means that the input text is required to have text-->
+			<p>Password: <input type="text" required></p>
+		<!--for valid emails-->
+			<p>Email: <input type="email" required></p>
+		<!--patterns (regex): see readme for a list of patterns-->
+			<p>Pattern: <input type="text" pattern="[0-9]"></p>
+			
+		<!--Datalist contains a bunch of list options-->
+		<datalist id="names">
+                  <select>
+                      <option value="Rob">Rob</option>
+                      <option value="Kirsten">Kirsten</option>
+                      <option value="Tommy">Tommy</option>
+                      <option value="Ralphie">Ralphie</option>
+                  </select>
+         </datalist>
+		 <!--This can query through the names of the list and make it easy to select-->
+         <p>List: <input type="text" list="names"></p>
+		 
+		 <!--Now we can upload multiple files with the multiple keyword in HTML5--> 
+         <p>Multiple file upload: <input type="file" multiple></p>
+		 
+		<!--we can change the formaction and formmethod within the form-->
+		<p><input type="submit" value="Submit to processform2.php" formaction="processform2.php" formmethod="post"></p>
+		</form>
+		
+		<!--We can actually call the form outside of the form!-->
+		<p>Code outside form: <input form="myForm" type="text"></p>
+	</body>
+
+</html>

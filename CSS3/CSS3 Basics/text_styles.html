@@ -1,0 +1,50 @@
+
+<html>
+
+    <head>
+        
+        <title>Text Styles</title>
+		
+		<!--Instead of coding text styles via HTML, we can do it in CSS!-->
+		<!--Font weight allows us to add boldness to our text instead of using regular HTML-->
+		<!--Font style allows us to italic of the text instead of using regular HTML-->
+		<!--Text Decoration allows us to underline of the text instead of using regular HTML-->
+		<!--All of the possible CSS text styles are provided in the Resources.txt-->
+		
+		<!--If we don't want links to be underlined, then we set the text-decoration to a to none-->
+		<!--If we want the link to be underlined when hovered, then we set that in the psuedo-selection of a.-->
+        <style type="text/css">
+		
+			.boldText {
+				font-weight: bold;
+			}
+			.italicText {
+				font-style: italic;
+			}
+			.underlineText {
+				text-decoration: underline;
+			}
+			.bigText {
+				font-size: 200%;
+			}
+			a {
+				text-decoration: none;
+			}
+			a:hover {
+				text-decoration: underline;
+				color: blue;
+			}
+        </style>
+    
+    </head>
+
+    <body>
+		<p class="boldText">This is some bold text!</p>
+		<p class="italicText">This is some italic text!</p>
+		<p class="boldText">Here is only italic text. <span class="italicText">This is both bold and italic text!</span></p>
+		<p class="underlineText">This is some underlined text!</p>
+		<p class="bigText">This is some BIG text!</p>
+		<p><a href="http://www.google.com">Click here to go to Google!</a></p>
+    </body>
+
+</html>

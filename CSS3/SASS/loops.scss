@@ -1,0 +1,40 @@
+/*loops repeat a specific-set of code inside of it*/
+$headers: h1,h2,h3,h4,h5,h6;
+$fontSize: 5px, 10px, 15px, 20px, 25px, 30px, 35px;
+$index: 0;
+
+/*loops 5 times: starts from 1 and goes through 6 <- must be a whole number*/
+/*this creates h1 to h6 elements that have font-size of 55px*/
+@for $i from 1 through 6 {
+	h#{$i} {
+		font-size: 55px;
+	}
+}
+
+/*loops through an array and sets the arrays*/
+/*this creates h1 to h6 elements that have font-size from $fontSize*/
+@for $i from 1 through 6 {
+	#{nth($headers, $i)} {
+		font-size: nth($fontSize, $i);
+	}
+}
+
+/*this is similar to for each and sets each value in a list*/
+/*each index in $headers (h1 to h6) is set to $head and then makes the font-size to 55px*/
+@each $head in $headers {
+	#{$head} {
+		font-size: 55px;
+	}
+}
+
+/*we can get values for multiple variables within a list NOTE: Cannot use variables after the 'in'*/
+@each $head, $font in (h1, 55px), (h2, 50px) {
+	#{$head} {
+		font-size: $font;
+	}
+}
+
+/*using while loops: can pass booleans <- loops through 6 times*/
+@while $index < 6 {
+	$index: $index + 1;
+}

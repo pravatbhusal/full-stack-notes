@@ -1,0 +1,74 @@
+<html lang="en">
+  <head>
+  
+  <!--https://v4-alpha.getbootstrap.com/components/navbar/-->
+	<title>Navbar</title>
+    <meta charset="utf-8" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
+	<style type="text/css">
+		
+	</style>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+  </head>
+  <body>
+	
+	<!--Nav is basically a div for a navigation links. Navs can be replaced with the div element.-->
+	<!--Nav bars do not move even if you scroll up or down-->
+	<!-- bg-blahblah is the color of the navbar-->
+<nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+<!--This button checks for the width of the screen and adjusts the navbar to create a button as a dropdown (collapse) menu for the nav items-->
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  
+  <!--The "Navbar" text is the brand name-->
+  <a class="navbar-brand" href="#">Navbar</a>
+  
+  <!--This div is supported by the navbar collapsing of whenever the width is smaller and this is where content will go.-->
+  <!--The class for the div means to not collapse the item until the collapse button is clicked-->
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+	<!--The Home is an "active" nav item-->
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#">Disabled</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="text" placeholder="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+  
+</nav>
+
+<!--Here is a collapsed nav bar that is toggable via nav bar-->
+<div class="pos-f-t">
+  <div class="collapse" id="navbarToggleExternalContent">
+  
+  <!--This is where content will go-->
+    <div class="bg-inverse p-4">
+      <h4 class="text-white">Collapsed content</h4>
+      <span class="text-muted">Toggleable via the navbar brand.</span>
+    </div>
+  </div>
+  
+  <!--Create the navbar for the content-->
+  <nav class="navbar navbar-inverse bg-inverse">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </nav>
+</div>
+
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+  </body>
+</html>

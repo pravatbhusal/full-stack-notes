@@ -1,0 +1,57 @@
+
+<html>
+
+    <head>
+        
+        <title>Borders</title>
+
+		<!--Border's first parameter is the pixels, second is color, and third is style-->
+		<!--You can also break border properties down with border-blahblah. However, the coding must go in order!-->
+		<!--List of border styles are in the Resources.txt file.-->
+		<!--Border radius adds smooth edges to our squares. Having a lot of border radius can make a circle (just set it to half of the width)!-->
+        <style type="text/css">
+			.borders1 {
+				background-color: red;
+				border: 10px black solid; 
+			}
+			.borders2 {
+				background-color: white;
+				border-top: 10px;
+				border-bottom: 10px;
+				border-left: 10px;
+				border-right: 10px;
+				border-color: black;
+				border-style: dotted;
+			}
+			.borders3 {
+				background-color: green;
+				border-radius: 20px;
+			}	
+			#square {
+				width: 100px;
+				height: 100px;
+				margin: 40px 40px 40px 40px;
+				float: left;
+			}
+        </style>
+    
+    </head>
+
+    <body>
+	
+	<!--You can actually integrate classes AND ids together-->
+		<div class="borders1" id="square">
+		<p></p>
+		</div>
+		
+		<div class="borders2" id="square">
+		<p></p>
+		</div>
+		
+		<div class="borders3" id="square">
+		<p></p>
+		</div>
+		
+    </body>
+
+</html>

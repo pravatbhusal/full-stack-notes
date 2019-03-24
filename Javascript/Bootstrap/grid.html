@@ -1,0 +1,65 @@
+<html lang="en">
+  <head>
+  
+  	<!--https://v4-alpha.getbootstrap.com/layout/grid/-->
+	<title>Grid</title>
+	<!--Meta tag that states we want to load this with internet version edge at all times-->
+    <meta charset="utf-8" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
+	<!--Note: Media queries allow us to change the look of the website with different widths-->
+	<style type="text/css">
+	// Extra small devices (portrait phones, less than 576px)
+	// No media query since this is the default in Bootstrap
+
+	// Small devices (landscape phones, 576px and up)
+	@media (min-width: 576px) {
+	
+	}
+
+	// Medium devices (tablets, 768px and up)
+	@media (min-width: 768px) {
+	
+	}
+
+	// Large devices (desktops, 992px and up)
+	@media (min-width: 992px) {
+	
+	}
+
+	// Extra large devices (large desktops, 1200px and up)
+	@media (min-width: 1200px) {
+	
+	}
+	</style>
+
+    <!-- Bootstrap CSS file. Integrity checks if we're using the correct version, and the crossorigin makes sure we're using this anonymously.-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+  </head>
+  <body>
+	
+	<!--Usually everything in bootstrap is in a container-->
+	<!--Grids work as they change their size whenever the user changes their screen width-->
+<div class="container">
+  <h1>Hello, world!</h1>
+	<div class="row">
+	<!--Everything is column "sm" = small whenever the screen is very small it will stack-->
+	<!--We can set it to "md" to stack at the medium breakpoint for the grid-->
+	<!--The sm-4 means to create a div that is 4 minicolumns wide, also bootstrap has total 12 columns-->
+		<div class="col-sm-4">col</div>
+		<div class="col-sm-4">col</div>
+		<div class="col-md-4">col</div>
+	</div>
+	<div class="row">
+	<!-- md-6 gives more spacing in between the columns (there are 12 columns on the screen, so 6 means go half right-->
+		<div class="col-md-6">The first half!</div>
+		<div class="col-md-6">The second half!</div>     
+    </div>
+</div>
+
+    <!-- jQuery first, then Tether, then Bootstrap JS to load the website faster.-->
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+  </body>
+</html>

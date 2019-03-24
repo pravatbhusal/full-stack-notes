@@ -1,0 +1,56 @@
+<html>
+	
+	<head>
+		<title>Change Content</title>	
+		
+		 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		 
+		 <style type="text/css">	
+			#circle {
+				width: 150px;
+				height: 150px;
+				border-radius: 50%;
+				background-color: green;
+				margin: 10px;
+			}
+			#square {
+				width: 150px;
+				height: 150px;
+				background-color: red;
+				margin: 10px;
+				font-size: 12;
+			}
+		 </style>
+	</head>
+	
+	<body>
+	
+	<div id="circle"></div>
+	<div id="square"><p></p></div>
+	<iframe id="websiteframe" src="http://www.syncedonline.com/#people-2"></iframe>
+	<p id="changetext">This is some text.</p>
+	
+	<script type="text/javascript">
+		
+		//whenever the circle is clicked, the the text will change the HTML content
+		$("#circle").click(function () {
+			$("#changetext").html("The circle was clicked and changed using jQuery!");
+			
+			//this would alert the html value within the text
+			alert($("#changetext").html());
+		});
+		
+		//whenever you hover over the square, then change the paragraph text within.
+		$("#square").hover(function () {
+			$("#square").find("p").text("You hovered over the square!");
+		});
+		
+		//whenever you hover over the iframe, then it will change the website
+		$("#websiteframe").hover(function () {
+			$("iframe").attr("src", "https://www.ecowebhosting.co.uk");
+		});
+	</script>
+		
+	</body>
+
+</html>

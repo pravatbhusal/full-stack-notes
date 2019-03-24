@@ -1,0 +1,27 @@
+
+<html>
+
+    <head>
+        <title>Variables</title>
+    </head>
+
+    <body>
+	<!--This creates an input textbox-->
+	<input type="text" id="textInput" placeholder="Put some text here!">
+	
+	<p id="text">Hello, this is a text.</p>
+	<p><button id="changeText">Change the variable text!</button></p>
+	
+        <script type="text/javascript">
+			var inputText = "";
+			
+			document.getElementById("changeText").onclick = function () {
+			//get the value from the text typed into the box
+			inputText = document.getElementById("textInput").value;
+			//now implement that value into the text
+			document.getElementById("text").innerHTML = inputText;
+			}
+        </script>
+    </body>
+
+</html>

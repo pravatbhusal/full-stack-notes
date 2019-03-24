@@ -1,0 +1,32 @@
+<html>
+	
+	<head>
+		<title>Access Elements</title>	
+	</head>
+	
+	<body>
+	
+	<p id="text">Hello World!</p>
+	
+	<!--Document tells the javascript that we're looking for an item inside the html document-->
+	<!--getElementById will get an element by the id of an HTML item-->
+	<!--The innerHTML will get the inner items of the element, and then we set that element to Hello Pravat!-->
+	<script type="text/javascript">
+		document.getElementById("text").innerHTML = "Hello Pravat!";
+		var getElementText = document.getElementById("text").value;
+		
+		//we can use modern selectors (called querySelector, helpful for getting child elements in a parent)
+		var getElement = document.querySelector("#text");
+		getElement.innerHTML = "Hello World!";
+		
+		//We can also leave comments with double slashes.
+		
+		/*
+		This is a multi-line comment.
+		We can put more lines.
+		*/
+	</script>
+	
+	</body>
+
+</html>

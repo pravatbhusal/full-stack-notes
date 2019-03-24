@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CSS Variables</title>
+      <style>
+      /* Define variables in the root element for global scope*/
+		  /* NOTE: variables are made with "--" */
+		  :root {
+			--main-bg-color: red;
+			--header-bg-color: blue;
+      --box-height: 20;
+		  }
+
+		  /* this sets the background color. the first parameter of var is the variable
+		  the second parameter is optional, and it's the fall-back in-case variables isn't supported by the browser
+		  for the height example, we can actually set a variable with no specific unit and then use the calc() function
+		  to set the unit for us.*/
+		  #box {
+			background: var(--main-bg-color, red);
+			width: 50px;
+			height: calc(var(--box-height) * 1px);
+		  }
+
+		  #main-header {
+			background: var(--header-bg-color, blue);
+			width: 1000px;
+			height: 50px;
+		  }
+      </style>
+  </head>
+
+  <body>
+	<header id="main-header"></header>
+	<div id="box"></div>
+  </body>
+
+  <script>
+	//get the styles of the box and get a variable in CSS
+	const box = document.querySelector("#box");
+	const boxStyles = getComputedStyle(box);
+	const boxMainColor = boxStyles.getPropertyValue("--main-bg-color");
+
+	//set a variable in CSS
+	const header = document.querySelector("#main-header");
+	header.style.setProperty("--header-bg-color", boxMainColor);
+  </script>
+
+</html>

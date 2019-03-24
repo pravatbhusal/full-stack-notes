@@ -1,0 +1,54 @@
+
+
+<html>
+
+    <head>
+        
+        <title>Droppable</title>
+ 
+		<!--Implement the jQuery API libraries-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="jquery-ui/jquery-ui.js"></script>
+        <link href="jquery-ui/jquery-ui.css" rel="stylesheet">
+        
+        <style type="text/css">
+			#draggable {
+				width: 100px;
+				height: 100px;
+				background-color: red;
+				margin-bottom: 10px;
+			}
+			
+			#droppable {
+				width: 100px;
+				height: 100px;
+				background-color: green;
+				color: white;
+				margin-bottom: 10px;
+			}
+        </style>
+        
+    </head>
+
+    <body>
+	
+        <div id="draggable"></div>
+		<div id="droppable"><p>Drop here!</p></div>
+		
+        <script type="text/javascript">
+            $("#draggable").draggable();
+			
+			$("#droppable").droppable({
+				drop: function(event, ui){ 
+				//add drop function; event = the event (onrelease) and ui = the item dropped
+				//see more here: http://api.jqueryui.com/droppable/
+				
+					//this changes the text of the paragraph to Dropped!
+					$("#droppable").find("p").text("Dropped!");
+				}
+			});
+        </script>
+        
+    </body>
+
+</html>

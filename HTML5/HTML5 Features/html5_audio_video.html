@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Audio and Video</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+   
+  </head>
+
+  <body>
+      
+	  <!--create a video. controls allows the video controls, and autoplay autoplays the video-->
+      <video width="320" height="240" controls autoplay id="video">
+        <source src="video.mp4" type="video/mp4"> <!--Load the video source-->
+          Please upgrade your browser! <!--If we could not load the video-->
+      </video>
+      
+	  <!--play button to play the video-->
+      <button id="play">Play</button>
+      
+	  <!--create audio. controls allows the audio controls-->
+      <audio controls>
+        <source src="audio.mp3" type="audio/mpeg"> <!--Load the audio source-->
+        Please upgrade your browser! <!--If we could not load the audio-->
+      </audio>
+      
+      <script>
+          document.getElementById("play").onclick = function() {
+		  //if the video is paused, then play the video and change the button text to pause
+              if (document.getElementById("video").paused) {
+                document.getElementById("video").play();
+                  this.innerHTML = "Pause";
+              } else { //else, the video is playing so let's pause it and change the button text to play
+                document.getElementById("video").pause();
+                  this.innerHTML = "Play";
+              } 
+          }
+      </script>
+   
+  </body>
+</html>

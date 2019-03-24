@@ -1,0 +1,40 @@
+<html>
+	
+	<head>
+		<title>Forms</title>	
+	</head>
+	
+	<body>
+	
+		<!--All form stuff (buttons, input texts, checkboxes, etc.) -->
+		<form>
+			<!--This is a form that has an input text after the Username text within a paragraph with placeholder of None-->
+			<p> Username: <input type="text" placeholder="Type Username Here!"> </p>
+			<p> Stay logged in: <input type="checkbox"> </p>
+			
+			<!--Radio buttons with the age element and the values are to check what is set when clicked-->
+			<p> Under 18: <input type="radio" name="age" value="u18"> </p>
+			<p> Over 18: <input type="radio" name="age" value="o18"> </p>
+			
+			<p>Favorite Food:
+			<!--the select form contains multiple objects that you can choose and by default the pizza is selected-->
+				<select>
+					<option>Sandwich</option>
+					<option selected>Pizza</option>
+				</select>
+			</p>
+			
+			<!--the submit form is a button and the value is the button's text.-->
+			<p> <input type="submit" value="Click me!"> </p>
+					
+		</form>
+		
+		<!--here's a new form that when an action is done it opens this link-->
+		<form action="http://www.wuxiaworld.com/issth-index/">
+			<p>Want to read I Shall Seal The Heavens?</p>
+			<p><input type="submit" value="Click Me!!"></p>
+		</form>
+		
+	</body>
+
+</html>

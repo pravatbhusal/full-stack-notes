@@ -1,0 +1,36 @@
+
+<html>
+
+    <head>
+        <title>Events</title>
+    </head>
+
+    <body>
+	<p id="clickHere">Click Here</p>
+	<p id="hoverHere">Hover Here</p>
+	<p id="hoverOut">Hover Out</p>
+	
+	<script type="text/javascript">
+	/*Look at the README.md file for more information about other events */
+	
+		var clickHere = document.querySelector("#clickHere");
+		//listening for the event for when clicking #clickHere
+		clickHere.addEventListener("click", function() {
+			clickHere.innerHTML = "Clicked!";
+		});
+		
+		var hoverHere = document.querySelector("#hoverHere");
+		//listening for the event for when hovering over #hoverHere
+		clickHere.addEventListener("mouseover", function() {
+			hoverHere.innerHTML = "Hovering over!";
+		});
+		
+		var hoverOut = document.querySelector("#hoverOut");
+		//listening for the event for when hovering out #hoverOut
+		clickHere.addEventListener("mouseout", function() {
+			hoverOut.innerHTML = "Hovering out!";
+		});
+	</script>
+	
+    </body>
+</html>

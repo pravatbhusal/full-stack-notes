@@ -1,0 +1,32 @@
+/*
+- we can use mathematical operators (+, -, /, *, %)
+- it follows PEMDAS (order of operations)
+- we can also use variables*/
+$a: 16px;
+$b: 32px;
+$c: 4.5px;
+$equation: (4 - $b + 5)px;
+
+div {
+	width: 5 + 10 + $a - $b * 2 / $c;
+	height: $b + $c;
+	line-height: $equation;
+	/*rounds up depending on value (this example returns 2)*/
+	width: round(1.5);
+	/*round down at all times (this example returns 1)*/
+	width: floor(1.8);
+	/*rounds up at all times (this example returns 2)*/
+	width: ciel(1.2);
+	/*converts a number to percentage format) NOTE: cannot use measurements like 'px' from CSS*/
+	width: percentage(0.1);
+	/*returns the absolute number (all positive numbers)*/
+	width: abs(-0.5);
+	/*finds the smallest number in a list of numbers*/
+	width: min(10,20,30,40);
+	/*finds the greatest number in a list of numbers*/
+	width: max(10,20,30,40);
+	/*gets a random number from 0 to 0.99999999*/
+	width: random();
+	/*gets a random number from 0 to the number inclusive in the argument*/
+	width: random(100);
+}

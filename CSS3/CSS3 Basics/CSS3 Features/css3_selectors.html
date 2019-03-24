@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Advanced Selectors</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+      
+	  <!--div p means all the paragraphs within a div-->
+	  <!--h3 ~ p means all the divs that have an h3 and paragraph will change the paragraph-->
+	  <!--h3 + p means the paragraph within a div after the h3 will change-->
+	  <!--a[target] selects all the links that have a target tag-->
+	  <!--a[href*="google"] selects all the links that have the "google" string.-->
+      <style>
+          div p {
+              font-weight: bold;
+          }
+          
+          h3 ~ p {
+              text-decoration: underline;
+          }
+          
+          h3 + p {
+              font-size: 150%;
+          }
+          
+          a[target] {
+              color: yellow;
+          }
+          
+          a[href*="google"] {
+              font-size: 150%;
+          }
+      </style>
+      <!--
+		^= begins with
+		$= ends with
+		~= has the value between 2 spaces
+		|= value seperated by hyphens (-)
+		*= selects all value with the string
+		= selects only a specific string
+	  -->
+  </head>
+  
+  <body>
+      
+      <h1>I am a heading</h1>
+      
+      <div>
+        <h3>I'm an h3 element</h3>
+        <p>I am a paragraph.</p>
+        <p>I'm in the div.</p>
+        <a target="_blank">I am a link</a>
+      </div>
+      
+      <div>
+        <p>I'm in another div</p>
+      </div>
+      
+      <p>I am outside the div</p>
+      
+      <a  href="http://www.google.com">I'm another link</a>
+      
+  </body>
+    
+</html>

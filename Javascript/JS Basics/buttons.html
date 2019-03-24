@@ -1,0 +1,35 @@
+<html>
+
+	<head>
+		<title>Buttons</title>
+	</head>
+
+	<body>
+
+	<p id="text1">Hello World!</p>
+	<button id="changeWorld">Who are you, though?.</button>
+
+	<p id="text2">Javascript is...</p>
+	<button id="appendText">What is Javascript?.</button>
+
+	<p id="text3"></p>
+	<button id="addText">Hmm..?</button>
+
+	<script type="text/javascript">
+	//We can create a button that when clicked we do a function.
+		document.getElementById("changeWorld").onclick = function() {
+			document.getElementById("text1").innerHTML = "Hello Pravat!";
+		}
+
+		document.getElementById("appendText").onclick = function() {
+			document.getElementById("text2").innerHTML = "I think " + document.getElementById("text2").innerHTML + " is cool!";
+		}
+
+		document.getElementById("addText").onclick = function() {
+			document.getElementById("text3").innerHTML = "Hello, how are you?";
+		}
+	</script>
+
+	</body>
+
+</html>
