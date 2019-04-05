@@ -6,4 +6,4 @@ Imagine a stack of paper. The last piece put into the stack is on the top, so it
 
 An example of a Stack is below.  
 
-<img src="/references/Java/DS and Algos/src/lifo/images/stack.png" width="450" height="250" />
+<img src="images/stack.png" width="450" height="250" />

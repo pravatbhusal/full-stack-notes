@@ -8,4 +8,4 @@ Big O notation refers to the time (how long) and space (memory) complexity for a
 
 A few examples of Big O functions and their time-space complexity are below.  
 
-<img src="/references/Java/DS and Algos/src/bigo/images/bigo.png" width="675" height="375" />
+<img src="images/bigo.png" width="675" height="375" />

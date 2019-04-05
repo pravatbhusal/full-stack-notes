@@ -10,7 +10,7 @@ Offers the searching benefit of an ordered Array and the structure of a LinkedLi
 
 A binary tree, or binary search tree, contains Nodes with no more than two children. The left child Node must be less than the parent Node, and the right child Node must be greater than or equal to the parent Node. This makes traversing (navigating) a binary search tree easier to search for a Node.  
 
-<img src="/references/Java/DS and Algos/src/trees/images/binarysearchtree.gif" width="350" height="250" />
+<img src="images/binarysearchtree.gif" width="350" height="250" />
 
 # Heap (Binary)
 Heaps, or binary heap, contain Nodes with no more than two children. They're structured by inserting into the left-most child of the level to the right-most child of the level. Therefore, if there's a missing left-side Node but there's a right-side Node, then the tree is not a Heap.  
@@ -25,12 +25,12 @@ There are two types of Heaps: maximum and minimum.
 ### Max Heap
 The root Node is the largest Node, and all parents are greater than or equal to the child Node. When inserting a Node that is larger than its parent, we must "trickle-up" the tree and replace Nodes till we find the proper location. When deleting a Node, we swap locations with the deleted Node and the newest Node, delete the newest Node's old reference, and "trickle-down" the tree and replace Nodes till we find the proper location.   
 
-<img src="/references/Java/DS and Algos/src/trees/images/max_heap.jpg" width="500" height="250" />
+<img src="images/max_heap.jpg" width="500" height="250" />
 
 ### Min Heap
 The root Node is the smallest Node, and all parents are less than or equal to the child Node. When inserting a Node that is smaller than its parent, we must "trickle-down" the tree and replace Nodes till we find the proper location. When deleting a Node, we swap locations with the deleted Node and the root Node, delete the newest Node's old reference, and "trickle-up" the tree and replace Nodes till we find the proper location.  
 
-<img src="/references/Java/DS and Algos/src/trees/images/min_heap.jpg" width="500" height="250" />
+<img src="images/min_heap.jpg" width="500" height="250" />
 
 # Red-Black Tree (Binary)
 Due to the complex nature of Red-Black Trees, there is no `RedBlackTree.java` file in this repository that implements the data structure.  
@@ -43,15 +43,15 @@ Red Black Trees are a Binary Search Tree with more algorithms to ensure it stays
     - All paths from a Node to a null link must contain the same number of Black Nodes  
 5. Paths from the root Node to elements with zero or one children are special  
 
-<img src="/references/Java/DS and Algos/src/trees/images/redblacktree.jpg" width="350" height="250" />
+<img src="images/redblacktree.jpg" width="350" height="250" />
 
 ### Properties
 1. If a Red Black Tree is complete (all Black Nodes except Red leaves at the lowest level), the height for n elements will be minimal: ~log(n)
 2. To get the maximum height for n elements, there should be as many Red Nodes as possible down one path and all other Nodes are Black: ~2log(n)
 
-<img src="/references/Java/DS and Algos/src/trees/images/maxheight_rbt.jpg" width="400" height="275" />
+<img src="images/maxheight_rbt.jpg" width="400" height="275" />
 
 ### Inserting/Deleting
 Whenever inserting or deleting into the RBT, you must rotate the tree between parent and grandparent then make appropriate color changes.
 
-<img src="/references/Java/DS and Algos/src/trees/images/insert_redblacktree.jpg" width="450" height="350" />
+<img src="images/insert_redblacktree.jpg" width="450" height="350" />

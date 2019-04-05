@@ -3,21 +3,21 @@ Simplest sorting algorithm that repeatedly swaps elements if in wrong order.
 
 This has a O(n^2) complexity, but is considered the worst sorting algorithm.  
 
-<img src="/references/Java/DS and Algos/src/sort/images/bubblesort.gif" width="450" height="250" />
+<img src="images/bubblesort.gif" width="450" height="250" />
 
 # Selection Sort
 Sorting algorithm that swaps the minimum value to the back of the unsorted portion of the list. Therefore, the back of the unsorted portion of the list becomes the front of the sorted portion of the list.  
 
 This has a O(n^2) complexity, but it's always faster than Bubble Sort because selection sort only searches in the unsorted portion of the list.  
 
-<img src="/references/Java/DS and Algos/src/sort/images/selectionsort.gif" width="450" height="250" />
+<img src="images/selectionsort.gif" width="450" height="250" />
 
 # Insertion Sort
 Sorting algorithm that has a "sorted" and "unsorted" portion. The algorithm checks if the element in the front of the sorted portion is greater than the unsorted portion, then the unsorted element will search and push the sorted section until it finds the proper position.
 
 This has a O(n^2) complexity, but it's always faster than Selection Sort because insertion sort only searches the unsorted portion until it finds the proper position.  
 
-<img src="/references/Java/DS and Algos/src/sort/images/insertionsort.gif" width="450" height="250" />
+<img src="images/insertionsort.gif" width="450" height="250" />
 
 Note: It's actually possible for insertion sort to be faster using an algorithm called the "Binary Insertion Sort." In the searching process, the search can utilize a binary search to make the sorted section search O(log(n)) fast, so the total complexity would be O(nlog(n)) instead of the insertion sort complexity of O(n^2). However, we don't cover "Binary Insertion Sort" in this lecture.  
 

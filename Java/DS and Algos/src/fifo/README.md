@@ -6,4 +6,4 @@ Imagine a queue at the store. The first person in line is the first person to ge
 
 An example of a Queue is below.
 
-<img src="/references/Java/DS and Algos/src/fifo/images/queue.png" width="450" height="250" />
+<img src="images/queue.png" width="450" height="250" />

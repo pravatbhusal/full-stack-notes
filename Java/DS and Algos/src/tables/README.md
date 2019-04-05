@@ -4,7 +4,7 @@ A data structure that maps keys (indexes) to values (Objects).
 # Hash Table
 A powerful data structure that has a O(1) retrieval algorithm. It utilizes the concept of Array index positions in order to achieve the O(1) complexity. The hash function uses a hash function to map Objects to index positions, so we can retrieve an Object's index position instantly.
 
-<img src="/references/Java/DS and Algos/src/tables/images/hashtable.png" width="600" height="375" />
+<img src="images/hashtable.png" width="600" height="375" />
 
 ### Hashing
 Hashing maps Objects to an index position within an Array, which allows for the O(1) retrieval algorithm.
