@@ -28,7 +28,8 @@ public class BinarySearch {
 	// assume list[] is sorted
 	public static int recursiveSearch(int data, int list[], int rangeStart, int rangeEnd) {
 		if(rangeStart <= rangeEnd) {
-			int midPoint = (rangeStart + rangeEnd) / 2;
+			// the mid point must be calculated in this manner or it may cause an integer overflow
+			int midPoint = rangeStart + (((rangeEnd - rangeStart)) / 2);
 			if(list[midPoint] == data) {
 				return midPoint;
 			} else if(data < list[midPoint]) {
