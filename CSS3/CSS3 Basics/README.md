@@ -19,8 +19,9 @@
 # CSS References:
 - http://completewebdevelopercourse.com/content/furtherreading/Reference%202%20-%20CSS.pdf
 
-# CSS Display
-<img src="images/ksvm/display_types.png" height="100%" width="100%"></img>
+# CSS Display Types
+<img src="images/display_types.png" height="75%" width="75%"></img>
+- https://stackoverflow.com/questions/9189810/css-display-inline-vs-inline-block
 
 ### Inline elements:
 1. respect left & right margins and padding, but not top & bottom  
