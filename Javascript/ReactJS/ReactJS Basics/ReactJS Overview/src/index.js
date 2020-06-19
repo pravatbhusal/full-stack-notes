@@ -1,13 +1,13 @@
-//react modules
+// react modules
 import React from 'react';
 import ReactDOM from 'react-dom';
-//components (independent pieces of the UI that accept "props")
+
+// components (independent pieces of the UI that accept "props")
 import Header from "./components/Header";
 import Home from "./components/Home";
 import Footer from "./components/Footer";
 import Lifecycle from "./components/Lifecycle";
 
-//creating the App class
 class App extends React.Component {
   constructor(props) {
     super();
@@ -15,14 +15,22 @@ class App extends React.Component {
       footerText: "This is the footer text."
     }
   }
+  
   changeFooter(newFooterText) {
-    //this updates the state of the footer text
+    // this updates the state of the footer text
     this.setState({
       footerText: newFooterText
     });
+    
+    /**
+      Whenever state changes in React, everything inside of the component will re-render including its children.
+      If you want to make React more efficient as rendering, then only use state changes in the necessary components,
+      or else it will re-render too many components since the children will also update with the parent.
+    */
   }
+  
   render() {
-    //returning JSX, an XML view system to render HTML with JS
+    // return in JSX format: an XML view system to render HTML with JS
     return (
       <div>
         <Header links={{navbarLinks: ["Home", "About"]}}/>
@@ -34,5 +42,5 @@ class App extends React.Component {
   }
 }
 
-//rendering the App class onto the index.html's root div
+// renders the App class onto the index.html's root div
 ReactDOM.render(<App />, document.getElementById('root'));
