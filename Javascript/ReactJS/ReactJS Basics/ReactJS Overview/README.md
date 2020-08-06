@@ -12,3 +12,19 @@ This folder represents the basic overview of modern ReactJS, a client-side libra
 
 # React Developer Tools (Google Chrome)
 https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi/related?hl=en
+
+# Webpack Bundling & Scalability
+Using create-react-app, it uses webpack to bundle all the JS code in one script file.
+
+"As your app grows, your bundle will grow too. Especially if you are including large third-party libraries. You need to keep an eye on the code you are including in your bundle so that you don’t accidentally make it so large that your app takes a long time to load." - React Docs
+
+To solve this, implement lazy loading so it splits your code up into more scripts.
+
+Read here to learn how: https://reactjs.org/docs/code-splitting.html
+
+You can only lazy load default components, if you want to lazy load a non-default component then use
+```js
+const OtherComponent = React.lazy(
+  () => import('./OtherComponent').then(module => ({ default: module.OtherComponent }))
+);
+```
