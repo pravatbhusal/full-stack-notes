@@ -1,0 +1,68 @@
+<html>
+    <style>
+        #parent {
+            position: relative;
+            width: 250px;
+            height: 250px;
+            background-color: red;
+        }
+        #top-left-child {
+            position: absolute;
+            top: 10;
+            left: 10;
+            width: 50px;
+            height: 50px;
+            background-color: black;
+        }
+        #upper-top-left-child {
+            position: absolute;
+            top: -5;
+            left: -5;
+            width: 50px;
+            height: 50px;
+            background-color: black;
+        }
+        #upper-top-right-child {
+            position: absolute;
+            top: -5;
+            right: -5;
+            width: 50px;
+            height: 50px;
+            background-color: black;
+        }
+        #upper-bottom-left-child {
+            position: absolute;
+            bottom: -5;
+            left: -5;
+            width: 50px;
+            height: 50px;
+            background-color: black;
+        }
+        #upper-bottom-right-child {
+            position: absolute;
+            bottom: -5;
+            right: -5;
+            width: 50px;
+            height: 50px;
+            background-color: black;
+        }
+    </style>
+
+    <p>This child element is positioned left 10 pixels and top 10 pixels inside of the parent.</p>
+    <div id="parent">
+        <div id="top-left-child"></div>
+    </div>
+
+    <p>We can even take the child out the parent and place it above the top left of the parent.</p>
+    <div id="parent">
+        <div id="upper-top-left-child"></div>
+    </div>
+
+    <p>Here's a cool effect using children divs as corner "bumpers" of the parent.</p>
+    <div id="parent">
+        <div id="upper-top-left-child"></div>
+        <div id="upper-top-right-child"></div>
+        <div id="upper-bottom-left-child"></div>
+        <div id="upper-bottom-right-child"></div>
+    </div>
+</html>

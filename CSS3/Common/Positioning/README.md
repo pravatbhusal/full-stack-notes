@@ -8,3 +8,8 @@ Read the complete guide to flexbox here: https://css-tricks.com/snippets/css/a-g
 For a shorter guide, read the W3Schools guide: https://www.w3schools.com/css/css3_flexbox.asp
 
 # Relative and Absolute Position
+If a parent element is relative and its child element is absolute, then you can position the child
+element anywhere relative the parent element.
+
+This is very helpful if we're trying to create position an element at the exterior of an element
+or at the edges of the element.
