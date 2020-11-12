@@ -1,0 +1,138 @@
+<html>
+    <style>
+        #black-box {
+            width: 50px;
+            height: 50px;
+            background-color: black;
+        }
+    </style>
+    <style>
+        #flex {
+            display: flex;
+            width: 100px;
+            height: 100px;
+        }
+        #flex-col {
+            display: flex;
+            flex-direction: column;
+            width: 100px;
+            height: 100px;
+        }
+        #center {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+        #top-center {
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+    </style>
+    <style>
+        #flex-quarter {
+            /*
+                flex sets the flex-grow, flex-shrink, and flex-basis properties. It's recommended to
+                use this shorthand property instead because it sets the other values intelligently.
+
+                This automatically sets the width of the container if using flex-direction row,
+                or it automatically sets the height of the container if using flex-direction column.
+            */
+            flex: 0.25;
+        }
+        #flex-twelve-half {
+            flex: 0.125;
+        }
+    </style>
+
+    <!--
+        Centers the elements inside of the div horizontally and vertically.
+        Flexbox makes it very easy to do this using align-items and justify-content.
+    -->
+    <p>As we see below, the black square is centered inside of the red.</p>
+    <div id="center">
+        <div id="black-box">&nbsp;</div>
+    </div>
+
+    <!--
+        Puts the elements inside of the div at the top while centering it horizontally.
+    -->
+    <p>Now the black square is centered at the top.</p>
+    <div id="top-center">
+        <div id="black-box">&nbsp;</div>
+    </div>
+
+    <p>
+        Spaces 4 elements inside of the div, each element takes 25% of the space. The width is automatically set by the flex property,
+        and if you try setting the width then it won't work because flex overrides it. You can set the height, though.
+    </p>
+    <div id="flex">
+        <div id="flex-quarter" style="background-color: teal">&nbsp;</div>
+        <div id="flex-quarter" style="background-color: blue">&nbsp;</div>
+        <div id="flex-quarter" style="background-color: violet">&nbsp;</div>
+        <div id="flex-quarter" style="background-color: brown">&nbsp;</div>
+    </div>
+
+    <p>
+        Now what if we have a 5th element but the flex is set to use 25% of the parent container?
+        It's intelligent and knows to separate it out to only use 20% per element.
+
+        What happens is that it tries to equal to 100%, so it adds the flex: 0.25 together
+        as 0.25 + 0.25 + 0.25 + 0.25 + 0.25 = 1.25 and flex will set 1.25 as 100%.
+    </p>
+    <div id="flex">
+        <div id="flex-quarter" style="background-color: teal">&nbsp;</div>
+        <div id="flex-quarter" style="background-color: blue">&nbsp;</div>
+        <div id="flex-quarter" style="background-color: violet">&nbsp;</div>
+        <div id="flex-quarter" style="background-color: brown">&nbsp;</div>
+        <div id="flex-quarter" style="background-color: green">&nbsp;</div>
+    </div>
+
+    <p>
+        There's only one element, but takes up only 25% of its parent container. Why? Didn't we just discuss that
+        flex takes up the entire container by adding-up all of the flex? So why is it not taking
+        up the entire container?
+
+        This is because if using flex less than 1, then it intelligently doesn't take up the entire
+        container and only takes the percent that was specified.
+    </p>
+    <div id="flex">
+        <div id="flex-quarter" style="background-color: teal">&nbsp;</div>
+    </div>
+
+    <hr />
+
+    <p>
+        We can set the flex direction to be column so that the inner-divs can be stacked using columns.
+        Remember, the height of each element is automatically set by the flex property when using the column direction.
+
+        If you try setting the height property in CSS, then it won't work because flex overrides it. You can set the
+        width, though.
+    </p>
+    <div id="flex-col">
+        <div id="flex-quarter" style="background-color: teal">&nbsp;</div>
+        <div id="flex-quarter" style="background-color: blue">&nbsp;</div>
+        <div id="flex-quarter" style="background-color: violet">&nbsp;</div>
+        <div id="flex-quarter" style="background-color: brown">&nbsp;</div>
+    </div>
+
+    <hr />
+
+    <p>
+        A common practice is to use spacers in-between flex boxes. As seen below, there's a 12.5%
+        space (denoted with the white gaps) between the boxes.
+    </p>
+    <div id="flex">
+        <div id="flex-quarter" style="background-color: teal">&nbsp;</div>
+        <div id="flex-twelve-half" style="background-color: white">&nbsp;</div>
+        <div id="flex-quarter" style="background-color: blue">&nbsp;</div>
+        <div id="flex-twelve-half" style="background-color: white">&nbsp;</div>
+        <div id="flex-quarter" style="background-color: violet">&nbsp;</div>
+    </div>
+</html>
