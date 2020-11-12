@@ -14,8 +14,8 @@ const doStuff = (someArray, lookFor) => {
 }
 
 // Better Way
-const otherStuff = (tracker, lookFor) => thingsThing => {
-  if (ThingsThing === lookFor) {
+const otherStuff = (someTracker, lookFor) => thingsThing => {
+  if (thingsThing === lookFor) {
     tracker.push(thingsThing);
   }
 }
