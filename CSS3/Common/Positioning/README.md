@@ -6,3 +6,5 @@ Flexbox allows you to put HTML elements into adjustable boxes, which these boxes
 Read the complete guide to flexbox here: https://css-tricks.com/snippets/css/a-guide-to-flexbox/
 
 For a shorter guide, read the W3Schools guide: https://www.w3schools.com/css/css3_flexbox.asp
+
+# Relative and Absolute Position
