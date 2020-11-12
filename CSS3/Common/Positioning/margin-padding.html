@@ -1,0 +1,30 @@
+<html>
+    <style>
+        #flex {
+            display: flex;
+        }
+        #margin {
+            height: 50px;
+            width: 50px;
+            margin-right: 64px;
+            background-color: red;
+        }
+        #padding {
+            width: 50px;
+            /*
+                Short-hand for saying padding-top, padding-left, padding-bottom, padding-right 
+            */
+            padding: 16px 32px 16px 32px;
+            background-color: red;
+        }
+    </style>
+
+    <p>Notice how these two boxes push away from each other to the right. This is what margin is doing (causing external spacing).</p>
+    <div id="flex">
+        <div id="margin">&nbsp;</div>
+        <div id="margin">&nbsp;</div>
+    </div>
+
+    <p>You can see that there's internal spacing inside of the div. This internal spacing is called "padding".</p>
+    <div id="padding">Testing 123</div>
+</html>

@@ -13,3 +13,6 @@ element anywhere relative the parent element.
 
 This is very helpful if we're trying to create position an element at the exterior of an element
 or at the edges of the element.
+
+# Padding and Margin
+Padding is used for internal spacing. Margin is used for external spacing.
