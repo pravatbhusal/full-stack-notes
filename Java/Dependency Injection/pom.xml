@@ -3,4 +3,16 @@
   <groupId>com.pravatbhusal</groupId>
   <artifactId>dependency-injection</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+  <dependencies>
+	<dependency>
+		<groupId>com.google.inject</groupId>
+		<artifactId>guice</artifactId>
+		<version>5.0.1</version>
+	</dependency>
+	<dependency>
+	    <groupId>com.google.inject.extensions</groupId>
+	    <artifactId>guice-assistedinject</artifactId>
+    	<version>5.0.1</version>
+	</dependency>
+  </dependencies>
 </project>
