@@ -1,6 +1,8 @@
 # ReactJS Basics (Overview)
 This folder represents the basic overview of modern ReactJS, a client-side library for JavaScript.
 
+Here's a helpful React 2022 cheat sheet: https://www.freecodecamp.org/news/the-react-cheatsheet/amp/
+
 # Commands
 - Use "npm start" to start the react application in development mode
 - Use "npm run build" to build for production
