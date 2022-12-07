@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"> <!-- This is necessary to include thymeleaf HTML specifications  -->
+	<head>
+		<meta charset="UTF-8">
+		<title>Student management system</title>
+	</head>
+	<body>
+		<div class="container">
+			Click here to add a new student:
+			<a href="/students/new">
+				<button>Add Student</button>
+			</a>
+			<table>
+				<thead>
+					<tr>
+						<th>Student First Name</th>
+						<th>Student Last Name</th>
+						<th>Student Email</th>
+						<th>Actions</th>
+					</tr>
+				</thead>
+				<tbody>
+					<!-- For each student, print out the student information  -->
+					<tr th:each="student: ${students}">
+						<td th:text="${student.firstName}" />
+						<td th:text="${student.lastName}" />
+						<td th:text="${student.email}" />
+						<td>
+							<a th:href="@{/students/edit/{id} (id=${student.id})}">
+								<button>Update</button>
+							</a>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</body>
+</html>
