@@ -3,8 +3,6 @@
 
 This YouTube video is a good tutorial to learn about Elementor: https://www.youtube.com/watch?v=jl8F4WglM3I&t=3948s&ab_channel=TylerMoore
 
-The atxwebsites.WordPress XML file in this folder is the exported Wordpress website that I created following that tutorial.
-
 ### Installation
 Install the "Astra" Wordpress theme and activate it for the website. The Astra template is a fast, fully customizable, and lightweight theme. It is one of the most popular wordpress themes that integrate well with Elementor. Other alternatives are also Divi, Ultra, and OceanWP.
 
@@ -70,3 +68,18 @@ For example, the below Text Editor element has a Viewport icon on the alignment 
 ![elementor viewport](misc/elementor-text-viewport.png)
 
 This means you can set text alignment to be different on desktop, tablet, or mobile devices.
+
+### Elementor Site Settings
+If you are using an Elementor supported theme, then the [Elementor Site Settings](https://elementor.com/help/site-settings/) is Elementor's version of the Wordpress Theme Customizer.
+
+Here you have options to control the Design System which consists of Global Colors and Global Fonts, Theme Builder which consists of Typography, Buttons, Images, and Form Fields settings, Header and Footer customizations (Hello Theme), and User Preferences, which consists of Site Identity where you can manage your site logo and more, Background, Layout, Lightbox, and Custom CSS settings.
+
+![site settings](misc/elementor-site-settings.png)
+
+For example, if we want to edit Global Colors of the theme, then we can go in the Global Colors settings:
+
+![global colors](misc/elementor-global-colors.png)
+
+Then we can set the element styles to use the new color:
+
+![set title global color](misc/elementor-set-title-global-color.png)
