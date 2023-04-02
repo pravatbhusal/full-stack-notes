@@ -1,9 +1,9 @@
-# Wordpress
-Wordpress is a free and open source content management system (CMS) to build websites using themes and plugins from the marketplace.
-- Wordpress Themes: https://wordpress.org/themes/
-- Wordpress Plugins: https://wordpress.org/plugins/
+# WordPress
+WordPress is a free and open source content management system (CMS) to build websites using themes and plugins from the marketplace.
+- WordPress Themes: https://wordpress.org/themes/
+- WordPress Plugins: https://wordpress.org/plugins/
 
-### Why Wordpress?
+### Why WordPress?
 The power of wordpress comes with the speed of how fast you can develop a website. Because you can re-use Wordpress themes and edit them to your liking, you can easily publish a website in a few hours. This is perfect for developing a minimal viable product (MVP) for small businesses.
 
 #### Pros of Wordpress
