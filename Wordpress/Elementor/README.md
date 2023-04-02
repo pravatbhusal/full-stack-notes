@@ -11,7 +11,7 @@ To get a curated catalog of templates that support Elementor, install the https:
 For testing purposes, you can use the "Planet Earth" template from the Starter Templates marketplace. The template will install the pre-defined pages, plugins (i.e. Elementor), and media.
 
 ### Free Elementor Pro
-To enable the "Pro" elements from Elementor, you can purchase the Pro license. Pro includes features such as custom CSS, WooCommerce widgets, social media integration, and more.
+To enable the "Pro" elements from Elementor, you can purchase the Pro license. Pro includes features such as Theme builder, WooCommerce widgets, social media integration, custom CSS, and more.
 
 ![elementor pro](misc/elementor-pro-widgets.png)
 
@@ -60,6 +60,14 @@ And then once you choose a page, it will be added to the existing page such as b
 
 ![elementor about us page](misc/elementor-about-us-page.png)
 
+### Elementor Pre-defined Kits
+[Elementor Kits](https://elementor.com/library/) are full sample websites with pages that you can use on your website. Elementor has a library of kits that you can curate, and you can mix and match the kit pages to create your own unique website.
+
+You can access a library kit's pages from the Library -> Pages tab when adding a new section to your website. See example with the [Digital Marketing Agency Website Kit](https://elementor.com/library/template-kit/digital-marketing-agency/):
+
+![kit pages](misc/elementor-kit-pages.png)
+
+
 ### Elementor Responsive Design
 Elementor supports [responsive design](https://elementor.com/help/mobile-editing/) for desktop, tablet, and mobile devices for styles that have a Viewport icon in the editor.
 
@@ -76,10 +84,35 @@ Here you have options to control the Design System which consists of Global Colo
 
 ![site settings](misc/elementor-site-settings.png)
 
-For example, if we want to edit Global Colors of the theme, then we can go in the Global Colors settings:
+For example, if we want to edit Global Colors of the Hello Theme, then we can go in the Global Colors settings:
 
 ![global colors](misc/elementor-global-colors.png)
 
 Then we can set the element styles to use the new color:
 
 ![set title global color](misc/elementor-set-title-global-color.png)
+
+### Elementor Theme Builder
+To create a Wordpress theme, you would have to custom HTML and CSS code the theme and then use it. With Elementor, you can use the [Theme Builder](https://elementor.com/help/the-elementor-theme-builder/) to build templates using the visual editor and override the current theme's page hierarchy, layout settings, and CSS.
+
+Let's create a template for the Header of our theme (Hello Theme) using Theme Builder.
+
+First, select Theme Builder from the Templates option in Wordpress:
+
+![theme builder link](misc/wordpress-templates-theme-builder.png)
+
+Notice there are a few different templates we can choose to inject into our theme, but for this example let's create a new Header:
+
+![theme builder add header](misc/elementor-add-new-header.png)
+
+So now we can build the header using the Elementor visual editor like so:
+
+![theme builder build header](misc/elementor-build-header.png)
+
+After we hit the Publish button to publish the Header, then a pop up will appear to set conditions on when to show this template. Since this will be the global header shown on all pages of the website, we can add a condition to Include on Entire Site:
+
+![theme builder condition](misc/elementor-header-condition.png)
+
+Now if you visit the website, you'll see the new Header being used by the theme:
+
+![website header](misc/website-with-new-header.png)
