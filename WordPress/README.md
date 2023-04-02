@@ -24,7 +24,7 @@ When not to use WordPress:
 3. Search engine optimization (SEO) friendly by default.
 4. Powers 42% of the internet, so there's tons of support for Wordpress.
 
-The fast, cheap, and SEO-friendly environment of Wordpress makes it a great solution for small businesses, startups, and individuals to start their online presence on the Internet. It's good for static website that doesn't require much dynamic data, perfect for small business.
+The fast, cheap, and SEO-friendly environment of Wordpress makes it a great solution for small businesses, startups, and individuals to start their online presence on the Internet.
 
 #### Cons of Wordpress
 1. Limited by themes and plugins that are available. If you need a very custom solution, then Wordpress may not be the best. Although it is still possible to make it fully customizable, a Wordpress website is not best suited for that complexity.
