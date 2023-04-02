@@ -6,13 +6,25 @@ WordPress is a free and open source content management system (CMS) to build web
 ### Why WordPress?
 The power of wordpress comes with the speed of how fast you can develop a website. Because you can re-use Wordpress themes and edit them to your liking, you can easily publish a website in a few hours. This is perfect for developing a minimal viable product (MVP) for small businesses.
 
+When to use WordPress:
+1. Portfolio and Blog website
+2. Small business website with an About, Services, and a Contact page
+3. Wiki, Documentation, Knowledge-base
+4. Small e-commerce website
+5. Learning management system (LMS)
+
+When not to use WordPress:
+1. When the website needs a user account system (e.g. forums, social networks). There are Membership plugins to create an account system, but these get expensive and are not the best solution to manage registered users. Usually these websites become very complex, and the plugins would limit scalability.
+2. When the website is for a [SaaS, PaaS, or IaaS](https://www.ibm.com/topics/iaas-paas-saas#:~:text=PaaS%2C%20or%20platform%20as%20a,%2C%20cloud%2Dhosted%20application%20software.). Service websites are complex and bring in tons of unique features, which plugins cannot accomplish.
+
+
 #### Pros of Wordpress
 1. No coding required! Load up a template add some plugins and you can develop a portfolio, blog, e-commerce, learning management system (LMS), and anything you can think of.
 2. Many cheap hosting websites (e.g. Bluehost) support Wordpress in their control panel.
 3. Search engine optimization (SEO) friendly by default.
 4. Powers 42% of the internet, so there's tons of support for Wordpress.
 
-The fast, cheap, and SEO-friendly environment of Wordpress makes it a great solution for small businesses, startups, and individuals to start their online presence on the Internet.
+The fast, cheap, and SEO-friendly environment of Wordpress makes it a great solution for small businesses, startups, and individuals to start their online presence on the Internet. It's good for static website that doesn't require much dynamic data, perfect for small business.
 
 #### Cons of Wordpress
 1. Limited by themes and plugins that are available. If you need a very custom solution, then Wordpress may not be the best. Although it is still possible to make it fully customizable, a Wordpress website is not best suited for that complexity.
