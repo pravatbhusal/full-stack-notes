@@ -17,7 +17,6 @@ When not to use WordPress:
 1. When the website needs a user account system (e.g. forums, social networks). There are Membership plugins to create an account system, but these get expensive and are not the best solution to manage registered users. Usually these websites become very complex, and the plugins would limit scalability.
 2. When the website is for a [SaaS, PaaS, or IaaS](https://www.ibm.com/topics/iaas-paas-saas#:~:text=PaaS%2C%20or%20platform%20as%20a,%2C%20cloud%2Dhosted%20application%20software.). Service websites are complex and bring in tons of unique features, which plugins cannot accomplish.
 
-
 #### Pros of Wordpress
 1. No coding required! Load up a template add some plugins and you can develop a portfolio, blog, e-commerce, learning management system (LMS), and anything you can think of.
 2. Many cheap hosting websites (e.g. Bluehost) support Wordpress in their control panel.
