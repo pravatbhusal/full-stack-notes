@@ -1,5 +1,5 @@
 # NextJS
-NextJS is a React framework that enables full-stack applications that provides in-built functionality for data fetching, CSS support (Tailwind), routing, API routes, middleware, and more.
+NextJS is a React framework that enables full-stack applications that provides in-built functionality for data fetching, CSS support (Tailwind), fonts, routing, API routes, middleware, and more.
 
 https://nextjs.org/
 
@@ -14,6 +14,9 @@ Folders:
 4. api - API routes
 
 Files:
-1. _app.tsx - App component boilerplate
-2. _document.tsx - Document component boilerplate
-3. index.tsx - Boilerplate for index page
+1. _app.tsx - App component to import global files (e.g. global.scss), app configuration, and more
+2. _document.tsx - Document component to add attributes to HTML (e.g. `lang="en"`)
+3. index.tsx - Boilerplate for index page, starting point of the application's code
+
+We will be modifying these boilerplate files for this tutorial project. This tutorial deletes the boilerplate TSX code in index.tsx to be replaced with our own code.
+
