@@ -52,7 +52,7 @@ model Post {
 ```
 
 ### Migrate Database
-At this point, we have a schema but no database so let's run `npm prisma migrate dev --name init` to initialize the `User` and `Post` tables in our SQLite database defined as dev.db. The `--name` flag is used to name the migration for version control.
+At this point, we have a schema but no database so let's run `npx prisma migrate dev --name init` to initialize the `Post` table in our SQLite database defined as dev.db. The `--name` flag is used to name the migration for version control.
 
 ### Prisma Client
 The client.ts file is the boilerplate code for Prisma to communicate with the database in our webserver. It is used to perform CRUD operations on the database. It is imported into the API routes to perform database operations.

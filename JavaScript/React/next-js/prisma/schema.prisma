@@ -11,19 +11,9 @@ datasource db {
 }
 
 // From Prisma quickstart docs: https://www.prisma.io/docs/getting-started/quickstart
-model User {
-  id    Int     @id @default(autoincrement())
-  email String  @unique
-  name  String?
-  posts Post[]
-}
-
-// From Prisma quickstart docs: https://www.prisma.io/docs/getting-started/quickstart
 model Post {
   id        Int     @id @default(autoincrement())
   title     String
   content   String?
   published Boolean @default(false)
-  author    User    @relation(fields: [authorId], references: [id])
-  authorId  Int
 }
